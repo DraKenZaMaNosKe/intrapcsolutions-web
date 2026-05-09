@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>¿Qué es un sistema PACS y cuándo lo necesita tu clínica? | IntraPC Solutions</title>
+<meta name="description" content="Guía completa sobre sistemas PACS (Picture Archive and Communication Systems): qué son, cómo funcionan, cuándo los necesita tu clínica de imagenología y cuánto cuesta implementarlos en México." />
+<meta name="keywords" content="que es PACS, sistema PACS Mexico, PACS Guadalajara, picture archive communication system, imagenologia medica, DICOM, almacenamiento estudios medicos, RIS PACS, integracion tomografo, integracion resonancia magnetica" />
+<meta name="author" content="IntraPC Solutions" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0A84FF" />
+<link rel="canonical" href="https://intrapcsolutions.com/blog/que-es-pacs-y-cuando-lo-necesita-tu-clinica.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://intrapcsolutions.com/blog/que-es-pacs-y-cuando-lo-necesita-tu-clinica.html" />
+<meta property="og:title" content="¿Qué es un sistema PACS y cuándo lo necesita tu clínica?" />
+<meta property="og:description" content="Guía técnica sobre sistemas PACS para clínicas de imagenología en México. Qué es, cómo funciona, cuándo lo necesitas y costos reales." />
+<meta property="og:image" content="https://intrapcsolutions.com/assets/intrapcsolutions/pacs.webp" />
+<meta property="og:locale" content="es_MX" />
+<meta property="article:published_time" content="2026-05-09T16:00:00-06:00" />
+<meta property="article:author" content="IntraPC Solutions" />
+<meta property="article:section" content="Sector Salud" />
+<meta property="article:tag" content="PACS" />
+<meta property="article:tag" content="DICOM" />
+<meta property="article:tag" content="Imagenología" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="¿Qué es un sistema PACS y cuándo lo necesita tu clínica?" />
+<meta name="twitter:description" content="Guía técnica completa sobre sistemas PACS para clínicas de imagenología en México." />
+<meta name="twitter:image" content="https://intrapcsolutions.com/assets/intrapcsolutions/pacs.webp" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A84FF'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E" />
+
+<!-- JSON-LD Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://intrapcsolutions.com/blog/que-es-pacs-y-cuando-lo-necesita-tu-clinica.html"
+  },
+  "headline": "¿Qué es un sistema PACS y cuándo lo necesita tu clínica?",
+  "description": "Guía completa sobre sistemas PACS para clínicas de imagenología en México. Qué es, cómo funciona, cuándo lo necesitas y costos reales.",
+  "image": "https://intrapcsolutions.com/assets/intrapcsolutions/pacs.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "IntraPC Solutions",
+    "url": "https://intrapcsolutions.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IntraPC Solutions",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://intrapcsolutions.com/assets/intrapcsolutions/hero.webp"
+    }
+  },
+  "datePublished": "2026-05-09",
+  "dateModified": "2026-05-09",
+  "inLanguage": "es-MX"
+}
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0Y2FDG8NN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0Y2FDG8NN');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --ink: #0B0B10;
+    --ink-2: #1D1D1F;
+    --gray-1: #6E6E73;
+    --gray-2: #86868B;
+    --gray-3: #AEAEB2;
+    --hairline: #E5E5EA;
+    --paper: #FFFFFF;
+    --paper-3: #F5F5F7;
+    --apple-blue: #0A84FF;
+    --apple-blue-deep: #0066CC;
+    --apple-blue-soft: #E8F1FE;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.06), 0 16px 48px rgba(0,0,0,.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Geist', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
+  }
+  a { color: var(--apple-blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 740px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.5px solid var(--hairline);
+  }
+  .topnav .row {
+    max-width: 1100px; margin: 0 auto;
+    padding: 0 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .topnav .brand {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 600; font-size: 16px;
+    color: var(--ink);
+  }
+  .topnav .brand .mark {
+    width: 26px; height: 26px; border-radius: 7px;
+    background: linear-gradient(135deg, var(--apple-blue), var(--apple-blue-deep));
+    box-shadow: 0 2px 6px rgba(10,132,255,0.25);
+    position: relative;
+  }
+  .topnav .brand .mark::before {
+    content: ''; position: absolute; inset: 6px;
+    border: 1.5px solid #fff; border-radius: 50%;
+  }
+  .topnav .brand .mark::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 4px; height: 4px; background: #fff; border-radius: 50%;
+  }
+  .topnav .links { display: flex; gap: 28px; font-size: 13px; color: var(--ink-2); }
+  .topnav .links a { color: inherit; text-decoration: none; }
+  .topnav .links a:hover { color: var(--apple-blue); }
+  .topnav .cta {
+    background: var(--apple-blue); color: #fff;
+    padding: 8px 16px; border-radius: 999px;
+    font-size: 13px; font-weight: 500;
+    text-decoration: none;
+  }
+
+  article {
+    padding: 56px 0 80px;
+  }
+
+  .breadcrumb {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px; color: var(--gray-2);
+    letter-spacing: 0.06em;
+    margin-bottom: 18px;
+  }
+  .breadcrumb a { color: var(--gray-2); }
+  .breadcrumb a:hover { color: var(--apple-blue); }
+
+  article h1 {
+    font-family: 'Geist', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .post-meta {
+    display: flex; gap: 12px; align-items: center;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px; color: var(--gray-2);
+    letter-spacing: 0.06em;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .post-meta .cat {
+    background: var(--apple-blue-soft); color: var(--apple-blue);
+    padding: 3px 10px; border-radius: 999px; font-weight: 500;
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  .featured-img {
+    aspect-ratio: 16/9;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 36px;
+    box-shadow: var(--shadow-md);
+  }
+  .featured-img img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  .lead {
+    font-size: 19px;
+    color: var(--ink-2);
+    line-height: 1.55;
+    margin-bottom: 32px;
+    font-weight: 400;
+  }
+
+  article h2 {
+    font-family: 'Geist', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 48px 0 16px;
+  }
+
+  article h3 {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 32px 0 12px;
+  }
+
+  article p {
+    font-size: 16px;
+    color: var(--ink-2);
+    margin-bottom: 18px;
+    line-height: 1.7;
+  }
+
+  article ul, article ol {
+    margin: 18px 0;
+    padding-left: 24px;
+  }
+  article li {
+    font-size: 16px;
+    color: var(--ink-2);
+    margin-bottom: 8px;
+    line-height: 1.65;
+  }
+  article li strong {
+    color: var(--ink);
+  }
+
+  article blockquote {
+    margin: 28px 0;
+    padding: 18px 22px;
+    background: var(--apple-blue-soft);
+    border-left: 4px solid var(--apple-blue);
+    border-radius: 8px;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  article blockquote strong { color: var(--apple-blue-deep); }
+
+  article code {
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    background: var(--paper-3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--apple-blue-deep);
+  }
+
+  .info-card {
+    margin: 32px 0;
+    padding: 24px;
+    background: var(--paper-3);
+    border-radius: 12px;
+    border: 1px solid var(--hairline);
+  }
+  .info-card .label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px;
+    color: var(--apple-blue);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .info-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.015em;
+  }
+  .info-card p { margin-bottom: 0; }
+
+  .checklist {
+    margin: 24px 0;
+    padding: 24px;
+    background: #F0FAF3;
+    border: 1px solid #B7E4C7;
+    border-radius: 12px;
+  }
+  .checklist h4 {
+    color: #1B5E20;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .checklist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .checklist li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #1B5E20;
+  }
+  .checklist li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2E7D32;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .table-wrap { overflow-x: auto; margin: 24px 0; }
+  table {
+    width: 100%; border-collapse: collapse;
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--hairline);
+  }
+  th {
+    background: var(--paper-3);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 13px;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td strong { color: var(--apple-blue); }
+
+  .cta-block {
+    margin: 56px 0 0;
+    padding: 36px 32px;
+    background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-blue-deep) 100%);
+    border-radius: 18px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(10,132,255,0.25);
+  }
+  .cta-block h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  .cta-block p {
+    color: rgba(255,255,255,0.92);
+    font-size: 15px;
+    margin-bottom: 22px;
+    max-width: 480px;
+    margin-left: auto; margin-right: auto;
+  }
+  .cta-block .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff;
+    color: var(--apple-blue-deep);
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: transform 0.25s ease;
+  }
+  .cta-block .btn:hover { transform: translateY(-2px); }
+
+  .author-card {
+    margin-top: 48px;
+    padding: 24px;
+    background: var(--paper-3);
+    border-radius: 14px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .author-card .avatar {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--apple-blue), var(--apple-blue-deep));
+    flex-shrink: 0;
+    position: relative;
+  }
+  .author-card .avatar::before {
+    content: ''; position: absolute; inset: 14px;
+    border: 2px solid #fff; border-radius: 50%;
+  }
+  .author-card .avatar::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 6px; height: 6px; background: #fff; border-radius: 50%;
+  }
+  .author-card .info strong {
+    display: block;
+    color: var(--ink);
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .author-card .info span {
+    font-size: 13px;
+    color: var(--gray-1);
+  }
+
+  footer {
+    background: var(--ink); color: var(--paper-3);
+    padding: 40px 0; text-align: center;
+    font-family: 'Geist Mono', monospace; font-size: 11px;
+    letter-spacing: 0.06em; color: var(--gray-3);
+  }
+  footer a { color: var(--gray-3); }
+  footer a:hover { color: #fff; }
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="row">
+    <a href="../" class="brand">
+      <div class="mark"></div>
+      <span>IntraPC Solutions</span>
+    </a>
+    <nav class="links">
+      <a href="../#salud">Sector salud</a>
+      <a href="../#servicios">Servicios</a>
+      <a href="./">Blog</a>
+      <a href="../#contacto">Contacto</a>
+    </nav>
+    <a href="../#contacto" class="cta">Solicitar consultoría →</a>
+  </div>
+</header>
+
+<article class="container">
+
+  <div class="breadcrumb">
+    <a href="../">Inicio</a> · <a href="./">Blog</a> · Sector salud
+  </div>
+
+  <h1>¿Qué es un sistema PACS y cuándo lo necesita tu clínica?</h1>
+
+  <div class="post-meta">
+    <span class="cat">Sector salud</span>
+    <span>9 mayo 2026</span>
+    <span>· 8 min de lectura</span>
+  </div>
+
+  <div class="featured-img">
+    <img src="../assets/intrapcsolutions/pacs.webp" alt="Estación de trabajo PACS con escaneos médicos DICOM en múltiples monitores" />
+  </div>
+
+  <p class="lead">
+    Si tu clínica realiza estudios de imagenología — radiografías, tomografías,
+    ultrasonidos, resonancias magnéticas — tarde o temprano vas a escuchar la
+    palabra <strong>PACS</strong>. En esta guía te explicamos qué es exactamente
+    un sistema PACS, cómo funciona, cuándo es momento de implementar uno y
+    cuánto cuesta hacerlo en México.
+  </p>
+
+  <h2>¿Qué significa PACS?</h2>
+
+  <p>
+    PACS son las siglas en inglés de <strong>Picture Archive and Communication
+    System</strong> — en español, Sistema de Archivo y Comunicación de
+    Imágenes. Es un software médico especializado que permite almacenar,
+    distribuir, visualizar y administrar estudios de imagenología generados
+    por equipos como tomógrafos, resonadores, ultrasonidos, mamógrafos y
+    rayos X digitales.
+  </p>
+
+  <p>
+    En términos simples: un PACS es la "biblioteca digital" donde viven todas
+    las imágenes médicas de tus pacientes, y la herramienta con la que tus
+    radiólogos las consultan, comparan y diagnostican desde cualquier lugar.
+  </p>
+
+  <div class="info-card">
+    <div class="label">// Dato clave</div>
+    <h4>El estándar universal: DICOM</h4>
+    <p>
+      Todos los equipos médicos modernos generan imágenes en formato
+      <code>DICOM</code> (Digital Imaging and Communications in Medicine).
+      Un PACS lee, almacena y muestra archivos DICOM. Es lo que permite
+      que un tomógrafo Siemens hable con un visor desarrollado por otra
+      empresa — el lenguaje común es DICOM.
+    </p>
+  </div>
+
+  <h2>¿Cómo funciona un PACS por dentro?</h2>
+
+  <p>
+    Un sistema PACS típico tiene cuatro componentes principales que
+    trabajan juntos:
+  </p>
+
+  <ol>
+    <li><strong>Las modalidades:</strong> los equipos médicos que generan
+    los estudios (tomógrafo, resonancia, ultrasonido, etc.). Estos envían
+    las imágenes al PACS automáticamente vía protocolo DICOM.</li>
+
+    <li><strong>El servidor de almacenamiento:</strong> guarda todas las
+    imágenes de manera estructurada, indexadas por paciente, fecha,
+    estudio y modalidad. Suele estar en un servidor local de la clínica
+    o en la nube.</li>
+
+    <li><strong>Las estaciones de visualización:</strong> computadoras con
+    software especializado donde radiólogos y médicos consultan los
+    estudios. Permiten zoom, ajuste de contraste, mediciones, comparación
+    con estudios previos y reconstrucción 3D.</li>
+
+    <li><strong>La integración con otros sistemas:</strong> normalmente un
+    PACS se conecta con el HIS (Hospital Information System), el RIS
+    (Radiology Information System) y el Expediente Clínico Electrónico
+    para que toda la información del paciente esté en un solo lugar.</li>
+  </ol>
+
+  <h2>Señales de que tu clínica necesita un PACS</h2>
+
+  <p>
+    Si tu clínica todavía maneja estudios médicos en CDs, placas físicas
+    o carpetas de Windows compartidas, probablemente ya estés sintiendo
+    los problemas. Estas son las señales más comunes de que llegó el
+    momento de implementar PACS:
+  </p>
+
+  <div class="checklist">
+    <h4>Síntomas de que necesitas PACS YA</h4>
+    <ul>
+      <li>Pacientes que pierden sus CDs con estudios y necesitan
+      repetirlos (con el costo asociado)</li>
+      <li>Tu radiólogo no puede ver estudios fuera del consultorio</li>
+      <li>No puedes comparar fácilmente un estudio actual con uno
+      anterior del mismo paciente</li>
+      <li>Tu personal pierde tiempo buscando estudios físicos en
+      archivos</li>
+      <li>Médicos referentes te piden estudios y tienes que mandarlos
+      por WhatsApp/email (riesgo legal de privacidad)</li>
+      <li>Te están auditando para certificación de calidad y te piden
+      almacenamiento digital con respaldo</li>
+      <li>Tu equipo nuevo de tomografía o resonancia genera estudios
+      con cientos de imágenes que ya no caben en un CD</li>
+      <li>Quieres ofrecer a pacientes acceso a sus estudios desde
+      su celular</li>
+    </ul>
+  </div>
+
+  <p>
+    Si marcaste 3 o más de los puntos anteriores, tu clínica está
+    perdiendo dinero y reputación cada semana que pasa sin un PACS.
+  </p>
+
+  <h2>Beneficios concretos de implementar PACS</h2>
+
+  <h3>1. Acceso desde cualquier lugar</h3>
+  <p>
+    Tus radiólogos pueden interpretar estudios desde casa, otro consultorio
+    o incluso desde su celular. Esto es especialmente valioso para clínicas
+    que quieren ofrecer interpretación remota o tienen radiólogos en
+    diferentes ciudades.
+  </p>
+
+  <h3>2. Comparación automática con estudios previos</h3>
+  <p>
+    Un buen PACS muestra automáticamente los estudios anteriores del
+    paciente lado a lado, lo que permite detectar cambios, mejoras o
+    progresión de enfermedades con mucha mayor precisión.
+  </p>
+
+  <h3>3. Eliminación del costo de placas y CDs</h3>
+  <p>
+    El costo del medio físico (placas radiográficas, CDs, sobres) más la
+    logística asociada (almacenamiento, recuperación, reimpresión) suele
+    pagar el PACS en menos de 2 años para una clínica de tamaño mediano.
+  </p>
+
+  <h3>4. Cumplimiento normativo</h3>
+  <p>
+    En México, la <strong>NOM-024-SSA3</strong> establece que los
+    expedientes clínicos electrónicos — incluidos estudios de imagen —
+    deben estar resguardados con respaldo, control de accesos y
+    trazabilidad. Un PACS profesional cumple con todos estos requisitos.
+  </p>
+
+  <h3>5. Integración con tu Expediente Clínico Electrónico</h3>
+  <p>
+    Cuando el PACS está bien integrado con el ECE, los médicos pueden ver
+    el reporte radiológico junto con la historia clínica del paciente, sus
+    laboratorios y sus medicamentos — todo en una sola pantalla.
+  </p>
+
+  <h2>¿Cuánto cuesta implementar un PACS en México?</h2>
+
+  <p>
+    El costo varía según el tamaño de la clínica, el número de equipos a
+    integrar y si se elige solución on-premise (servidores propios) o en
+    la nube. Un rango realista en pesos mexicanos es:
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Tamaño de clínica</th>
+        <th>Tipo PACS</th>
+        <th>Inversión inicial</th>
+        <th>Mantenimiento anual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Consultorio pequeño (1-2 equipos)</td>
+        <td>Cloud / SaaS</td>
+        <td><strong>$30,000 - $80,000</strong></td>
+        <td>$15,000 - $40,000</td>
+      </tr>
+      <tr>
+        <td>Clínica mediana (3-5 equipos)</td>
+        <td>Híbrido</td>
+        <td><strong>$120,000 - $350,000</strong></td>
+        <td>$50,000 - $120,000</td>
+      </tr>
+      <tr>
+        <td>Centro de imagenología (6+ equipos)</td>
+        <td>On-premise</td>
+        <td><strong>$400,000 - $1,500,000</strong></td>
+        <td>$100,000 - $300,000</td>
+      </tr>
+      <tr>
+        <td>Hospital con múltiples especialidades</td>
+        <td>Enterprise</td>
+        <td><strong>$1,500,000+</strong></td>
+        <td>$300,000+</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>
+    Estos costos incluyen el software PACS, la integración con tus equipos,
+    la migración de estudios existentes, la capacitación del personal y el
+    soporte técnico inicial.
+  </p>
+
+  <blockquote>
+    <strong>Tip importante:</strong> El costo más alto NO suele ser el
+    software del PACS, sino las integraciones con los equipos médicos
+    legacy (especialmente equipos de más de 10 años). Antes de cotizar
+    cualquier PACS, asegúrate de que el proveedor tenga experiencia
+    integrando tu marca y modelo específico de equipo.
+  </blockquote>
+
+  <h2>¿Cloud, on-premise o híbrido?</h2>
+
+  <p>
+    Esta es una de las decisiones más importantes y depende de tu volumen
+    de estudios, presupuesto y requisitos de privacidad:
+  </p>
+
+  <h3>PACS en la nube (Cloud / SaaS)</h3>
+  <p>
+    Pagas una mensualidad. El proveedor maneja servidores, respaldos y
+    actualizaciones. Ideal para clínicas pequeñas y consultorios. Ventajas:
+    bajo costo inicial, escalable, accesible desde cualquier lugar.
+    Desventajas: dependes de tu conexión a internet, costo recurrente.
+  </p>
+
+  <h3>PACS on-premise</h3>
+  <p>
+    Servidores propios en tu clínica. Inversión inicial alta pero sin
+    mensualidades. Ventajas: control total de los datos, no depende de
+    internet, ideal para hospitales con grandes volúmenes. Desventajas:
+    requiere infraestructura técnica, respaldos manuales, actualizaciones
+    a tu cargo.
+  </p>
+
+  <h3>PACS híbrido</h3>
+  <p>
+    Lo mejor de ambos: estudios recientes en servidor local (acceso
+    rápido), estudios antiguos en la nube (almacenamiento barato).
+    Recomendado para clínicas medianas y grandes que generan más de 50
+    estudios por día.
+  </p>
+
+  <h2>¿Qué buscar al elegir proveedor de PACS?</h2>
+
+  <ul>
+    <li><strong>Experiencia comprobada en sector salud mexicano</strong>
+    — preferentemente con casos en clínicas similares a la tuya.</li>
+    <li><strong>Cumplimiento NOM-024-SSA3</strong> — esencial para
+    auditorías y certificaciones.</li>
+    <li><strong>Soporte 24/7</strong> — un PACS caído significa estudios
+    sin interpretar y pacientes esperando.</li>
+    <li><strong>Integración demostrada con tu marca de equipo</strong> —
+    pide demos con tu modelo específico de tomógrafo, resonancia, etc.</li>
+    <li><strong>Plan de migración de estudios existentes</strong> — sin
+    interrumpir tu operación.</li>
+    <li><strong>Capacitación incluida</strong> para radiólogos y personal
+    administrativo.</li>
+    <li><strong>Acceso al código fuente o garantía de portabilidad</strong>
+    — para que no quedes "atrapado" con un proveedor.</li>
+    <li><strong>Acuerdo de confidencialidad (NDA)</strong> — los datos
+    de pacientes son extremadamente sensibles.</li>
+  </ul>
+
+  <div class="cta-block">
+    <h3>¿Necesitas implementar un PACS en tu clínica?</h3>
+    <p>
+      En IntraPC Solutions hemos implementado sistemas PACS y expedientes
+      clínicos electrónicos en clínicas y centros de imagenología desde
+      Guadalajara. Cumplimos con NOM-024-SSA3, integramos con todos los
+      equipos médicos del mercado y trabajamos con NDA desde el primer
+      contacto.
+    </p>
+    <a href="../#contacto" class="btn">Solicitar consultoría sin compromiso →</a>
+  </div>
+
+  <div class="author-card">
+    <div class="avatar"></div>
+    <div class="info">
+      <strong>IntraPC Solutions · Orbix Studio</strong>
+      <span>Más de 10 años implementando tecnología en sector salud y empresarial mexicano. Guadalajara, Jalisco.</span>
+    </div>
+  </div>
+
+</article>
+
+<footer>
+  <div class="container">
+    © 2026 IntraPC Solutions · Orbix Studio · <a href="../">Volver al inicio</a> · <a href="./">Más artículos</a>
+  </div>
+</footer>
+
+</body>
+</html>

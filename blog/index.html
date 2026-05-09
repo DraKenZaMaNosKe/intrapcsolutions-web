@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Blog · IntraPC Solutions — PACS, Expediente Clínico Electrónico y Tecnología Médica</title>
+<meta name="description" content="Artículos técnicos sobre sistemas PACS, Expediente Clínico Electrónico, NOM-024-SSA3, DICOM, HL7 y desarrollo de software a la medida para sector salud y empresarial." />
+<meta name="keywords" content="blog PACS, blog DICOM, blog NOM-024, articulos imagenologia medica, expediente clinico Mexico, software medico" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0A84FF" />
+<link rel="canonical" href="https://intrapcsolutions.com/blog/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://intrapcsolutions.com/blog/" />
+<meta property="og:title" content="Blog IntraPC Solutions — PACS, ECE y Tecnología Médica" />
+<meta property="og:description" content="Conocimiento técnico sobre sistemas PACS, Expediente Clínico Electrónico y software médico." />
+<meta property="og:image" content="https://intrapcsolutions.com/assets/intrapcsolutions/pacs.webp" />
+<meta property="og:locale" content="es_MX" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A84FF'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0Y2FDG8NN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0Y2FDG8NN');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --ink: #0B0B10;
+    --ink-2: #1D1D1F;
+    --gray-1: #6E6E73;
+    --gray-2: #86868B;
+    --gray-3: #AEAEB2;
+    --hairline: #E5E5EA;
+    --paper: #FFFFFF;
+    --paper-3: #F5F5F7;
+    --apple-blue: #0A84FF;
+    --apple-blue-deep: #0066CC;
+    --apple-blue-soft: #E8F1FE;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.06), 0 16px 48px rgba(0,0,0,.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Geist', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  a { color: var(--apple-blue); text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: var(--apple-blue-deep); }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.5px solid var(--hairline);
+  }
+  .topnav .row {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .topnav .brand {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 600; font-size: 16px;
+    letter-spacing: -0.015em; color: var(--ink);
+  }
+  .topnav .brand .mark {
+    width: 26px; height: 26px; border-radius: 7px;
+    background: linear-gradient(135deg, var(--apple-blue), var(--apple-blue-deep));
+    box-shadow: 0 2px 6px rgba(10,132,255,0.25);
+    position: relative;
+  }
+  .topnav .brand .mark::before {
+    content: ''; position: absolute; inset: 6px;
+    border: 1.5px solid #fff; border-radius: 50%;
+  }
+  .topnav .brand .mark::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 4px; height: 4px; background: #fff; border-radius: 50%;
+  }
+  .topnav .links { display: flex; gap: 28px; font-size: 13px; color: var(--ink-2); }
+  .topnav .links a { color: inherit; }
+  .topnav .links a:hover { color: var(--apple-blue); }
+  .topnav .cta {
+    background: var(--apple-blue); color: #fff;
+    padding: 8px 16px; border-radius: 999px;
+    font-size: 13px; font-weight: 500;
+  }
+
+  .blog-hero {
+    padding: 80px 0 40px; text-align: center;
+    background: linear-gradient(180deg, var(--paper-3) 0%, var(--paper) 100%);
+  }
+  .blog-hero .eyebrow {
+    display: inline-block; font-family: 'Geist Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--apple-blue); background: var(--apple-blue-soft);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 22px; font-weight: 500;
+  }
+  .blog-hero h1 {
+    font-family: 'Geist', sans-serif; font-weight: 700;
+    font-size: clamp(36px, 5vw, 56px); line-height: 1.05;
+    letter-spacing: -0.03em; margin-bottom: 16px;
+  }
+  .blog-hero h1 em {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+    background: linear-gradient(135deg, var(--apple-blue), var(--apple-blue-deep));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .blog-hero p {
+    max-width: 600px; margin: 0 auto;
+    font-size: 17px; color: var(--gray-1);
+  }
+
+  .posts-grid {
+    padding: 60px 0 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+  }
+  .post-card {
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex; flex-direction: column;
+  }
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--apple-blue);
+  }
+  .post-card .img {
+    aspect-ratio: 16/9; overflow: hidden;
+  }
+  .post-card .img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .post-card:hover .img img { transform: scale(1.05); }
+  .post-card .body {
+    padding: 22px 22px 26px;
+    display: flex; flex-direction: column; gap: 12px; flex: 1;
+  }
+  .post-card .meta {
+    display: flex; gap: 12px; align-items: center;
+    font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--gray-2);
+    letter-spacing: 0.06em;
+  }
+  .post-card .cat {
+    background: var(--apple-blue-soft); color: var(--apple-blue);
+    padding: 3px 10px; border-radius: 999px; font-weight: 500;
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .post-card h2 {
+    font-size: 20px; font-weight: 600; line-height: 1.3;
+    letter-spacing: -0.015em; color: var(--ink);
+  }
+  .post-card h2 a { color: inherit; }
+  .post-card p {
+    font-size: 14px; color: var(--gray-1); line-height: 1.55; flex: 1;
+  }
+  .post-card .read {
+    margin-top: 6px; font-size: 13px; font-weight: 500;
+    color: var(--apple-blue);
+  }
+
+  footer {
+    background: var(--ink); color: var(--paper-3);
+    padding: 40px 0; text-align: center;
+    font-family: 'Geist Mono', monospace; font-size: 11px;
+    letter-spacing: 0.06em; color: var(--gray-3);
+  }
+  footer a { color: var(--gray-3); }
+  footer a:hover { color: #fff; }
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="container row">
+    <a href="../" class="brand">
+      <div class="mark"></div>
+      <span>IntraPC Solutions</span>
+    </a>
+    <nav class="links">
+      <a href="../#salud">Sector salud</a>
+      <a href="../#servicios">Servicios</a>
+      <a href="./">Blog</a>
+      <a href="../#contacto">Contacto</a>
+    </nav>
+    <a href="../#contacto" class="cta">Solicitar consultoría →</a>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="container">
+    <div class="eyebrow">Blog · Conocimiento técnico</div>
+    <h1>Tecnología médica, <em>explicada</em>.</h1>
+    <p>
+      Artículos técnicos sobre sistemas PACS, expediente clínico electrónico,
+      integración de equipos médicos y desarrollo de software a la medida.
+    </p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="posts-grid">
+
+    <article class="post-card">
+      <div class="img">
+        <img src="../assets/intrapcsolutions/pacs.webp" alt="Sistema PACS con escaneos médicos DICOM" loading="lazy" />
+      </div>
+      <div class="body">
+        <div class="meta">
+          <span class="cat">Sector salud</span>
+          <span>9 mayo 2026</span>
+          <span>· 8 min lectura</span>
+        </div>
+        <h2><a href="que-es-pacs-y-cuando-lo-necesita-tu-clinica.html">¿Qué es un sistema PACS y cuándo lo necesita tu clínica?</a></h2>
+        <p>
+          Si tu clínica realiza estudios de imagenología, tarde o temprano vas a
+          escuchar la palabra PACS. Te explicamos qué es, por qué importa y
+          cómo saber si tu operación ya lo necesita.
+        </p>
+        <a href="que-es-pacs-y-cuando-lo-necesita-tu-clinica.html" class="read">Leer artículo →</a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 IntraPC Solutions · Orbix Studio · <a href="../">Volver al inicio</a>
+  </div>
+</footer>
+
+</body>
+</html>
