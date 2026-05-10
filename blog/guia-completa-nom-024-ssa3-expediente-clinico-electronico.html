@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Guía completa NOM-024-SSA3: Expediente Clínico Electrónico en México | IntraPC Solutions</title>
+<meta name="description" content="Todo sobre la NOM-024-SSA3: qué exige, qué clínicas deben cumplirla, cómo implementar un Expediente Clínico Electrónico que cumpla la norma mexicana, sanciones por incumplimiento y costo real." />
+<meta name="keywords" content="NOM-024-SSA3, NOM 024 expediente clinico, expediente clinico electronico Mexico, ECE NOM 024, normativa expediente clinico, ECE clinicas Mexico, software medico NOM 024, certificacion expediente clinico" />
+<meta name="author" content="IntraPC Solutions" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0A84FF" />
+<link rel="canonical" href="https://intrapcsolutions.com/blog/guia-completa-nom-024-ssa3-expediente-clinico-electronico.html" />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://intrapcsolutions.com/blog/guia-completa-nom-024-ssa3-expediente-clinico-electronico.html" />
+<meta property="og:title" content="Guía completa NOM-024-SSA3: Expediente Clínico Electrónico en México" />
+<meta property="og:description" content="Todo sobre la norma mexicana NOM-024-SSA3 para Expediente Clínico Electrónico: requisitos, sanciones, implementación y costos reales." />
+<meta property="og:image" content="https://intrapcsolutions.com/assets/intrapcsolutions/pacs.webp" />
+<meta property="og:locale" content="es_MX" />
+<meta property="article:published_time" content="2026-05-09T18:00:00-06:00" />
+<meta property="article:author" content="IntraPC Solutions" />
+<meta property="article:section" content="Sector Salud" />
+<meta property="article:tag" content="NOM-024-SSA3" />
+<meta property="article:tag" content="ECE" />
+<meta property="article:tag" content="Expediente Clínico Electrónico" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Guía completa NOM-024-SSA3: Expediente Clínico Electrónico" />
+<meta name="twitter:description" content="Todo sobre la norma mexicana NOM-024-SSA3 para Expediente Clínico Electrónico." />
+<meta name="twitter:image" content="https://intrapcsolutions.com/assets/intrapcsolutions/pacs.webp" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A84FF'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://intrapcsolutions.com/blog/guia-completa-nom-024-ssa3-expediente-clinico-electronico.html"
+  },
+  "headline": "Guía completa NOM-024-SSA3: Expediente Clínico Electrónico en México",
+  "description": "Todo sobre la norma mexicana NOM-024-SSA3 para Expediente Clínico Electrónico: requisitos, sanciones, implementación y costos.",
+  "image": "https://intrapcsolutions.com/assets/intrapcsolutions/pacs.webp",
+  "author": { "@type": "Organization", "name": "IntraPC Solutions", "url": "https://intrapcsolutions.com/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IntraPC Solutions",
+    "logo": { "@type": "ImageObject", "url": "https://intrapcsolutions.com/assets/intrapcsolutions/hero.webp" }
+  },
+  "datePublished": "2026-05-09",
+  "dateModified": "2026-05-09",
+  "inLanguage": "es-MX"
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0Y2FDG8NN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0Y2FDG8NN');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --ink: #0B0B10;
+    --ink-2: #1D1D1F;
+    --gray-1: #6E6E73;
+    --gray-2: #86868B;
+    --gray-3: #AEAEB2;
+    --hairline: #E5E5EA;
+    --paper: #FFFFFF;
+    --paper-3: #F5F5F7;
+    --apple-blue: #0A84FF;
+    --apple-blue-deep: #0066CC;
+    --apple-blue-soft: #E8F1FE;
+    --apple-orange: #FF9500;
+    --apple-red: #FF3B30;
+    --shadow-md: 0 4px 16px rgba(0,0,0,.06), 0 16px 48px rgba(0,0,0,.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Geist', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.65;
+  }
+  a { color: var(--apple-blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 740px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.5px solid var(--hairline);
+  }
+  .topnav .row {
+    max-width: 1100px; margin: 0 auto; padding: 0 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .topnav .brand {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 600; font-size: 16px; color: var(--ink);
+  }
+  .topnav .brand .mark {
+    width: 26px; height: 26px; border-radius: 7px;
+    background: linear-gradient(135deg, var(--apple-blue), var(--apple-blue-deep));
+    box-shadow: 0 2px 6px rgba(10,132,255,0.25);
+    position: relative;
+  }
+  .topnav .brand .mark::before {
+    content: ''; position: absolute; inset: 6px;
+    border: 1.5px solid #fff; border-radius: 50%;
+  }
+  .topnav .brand .mark::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 4px; height: 4px; background: #fff; border-radius: 50%;
+  }
+  .topnav .links { display: flex; gap: 28px; font-size: 13px; color: var(--ink-2); }
+  .topnav .links a { color: inherit; text-decoration: none; }
+  .topnav .links a:hover { color: var(--apple-blue); }
+  .topnav .cta {
+    background: var(--apple-blue); color: #fff;
+    padding: 8px 16px; border-radius: 999px;
+    font-size: 13px; font-weight: 500; text-decoration: none;
+  }
+
+  article { padding: 56px 0 80px; }
+
+  .breadcrumb {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px; color: var(--gray-2);
+    letter-spacing: 0.06em; margin-bottom: 18px;
+  }
+  .breadcrumb a { color: var(--gray-2); }
+  .breadcrumb a:hover { color: var(--apple-blue); }
+
+  article h1 {
+    font-family: 'Geist', sans-serif; font-weight: 700;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1; letter-spacing: -0.03em;
+    color: var(--ink); margin-bottom: 16px;
+  }
+
+  .post-meta {
+    display: flex; gap: 12px; align-items: center;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px; color: var(--gray-2);
+    letter-spacing: 0.06em; margin-bottom: 36px;
+    padding-bottom: 24px; border-bottom: 1px solid var(--hairline);
+  }
+  .post-meta .cat {
+    background: var(--apple-blue-soft); color: var(--apple-blue);
+    padding: 3px 10px; border-radius: 999px; font-weight: 500;
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  .featured-img {
+    aspect-ratio: 16/9; border-radius: 14px;
+    overflow: hidden; margin-bottom: 36px;
+    box-shadow: var(--shadow-md);
+  }
+  .featured-img img { width: 100%; height: 100%; object-fit: cover; }
+
+  .lead {
+    font-size: 19px; color: var(--ink-2); line-height: 1.55;
+    margin-bottom: 32px; font-weight: 400;
+  }
+
+  article h2 {
+    font-family: 'Geist', sans-serif; font-weight: 700;
+    font-size: 28px; letter-spacing: -0.02em; line-height: 1.2;
+    color: var(--ink); margin: 48px 0 16px;
+  }
+
+  article h3 {
+    font-family: 'Geist', sans-serif; font-weight: 600;
+    font-size: 20px; letter-spacing: -0.015em; line-height: 1.3;
+    color: var(--ink); margin: 32px 0 12px;
+  }
+
+  article p {
+    font-size: 16px; color: var(--ink-2);
+    margin-bottom: 18px; line-height: 1.7;
+  }
+
+  article ul, article ol { margin: 18px 0; padding-left: 24px; }
+  article li { font-size: 16px; color: var(--ink-2); margin-bottom: 8px; line-height: 1.65; }
+  article li strong { color: var(--ink); }
+
+  article blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--apple-blue-soft);
+    border-left: 4px solid var(--apple-blue);
+    border-radius: 8px;
+    font-size: 16px; line-height: 1.6;
+  }
+  article blockquote strong { color: var(--apple-blue-deep); }
+
+  article code {
+    font-family: 'Geist Mono', monospace; font-size: 13px;
+    background: var(--paper-3); padding: 2px 6px;
+    border-radius: 4px; color: var(--apple-blue-deep);
+  }
+
+  .info-card {
+    margin: 32px 0; padding: 24px;
+    background: var(--paper-3); border-radius: 12px;
+    border: 1px solid var(--hairline);
+  }
+  .info-card .label {
+    font-family: 'Geist Mono', monospace; font-size: 10px;
+    color: var(--apple-blue); letter-spacing: 0.16em;
+    text-transform: uppercase; font-weight: 500; margin-bottom: 10px;
+  }
+  .info-card h4 {
+    font-size: 18px; font-weight: 600; color: var(--ink);
+    margin-bottom: 8px; letter-spacing: -0.015em;
+  }
+  .info-card p { margin-bottom: 0; }
+
+  .warning-card {
+    margin: 32px 0; padding: 22px 24px;
+    background: #FFF8E6; border-left: 4px solid var(--apple-orange);
+    border-radius: 12px;
+  }
+  .warning-card h4 {
+    color: #C76800; font-size: 17px; font-weight: 600;
+    margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .warning-card p { margin-bottom: 0; color: #5C4400; }
+
+  .danger-card {
+    margin: 32px 0; padding: 22px 24px;
+    background: #FFE8E8; border-left: 4px solid var(--apple-red);
+    border-radius: 12px;
+  }
+  .danger-card h4 {
+    color: #B82323; font-size: 17px; font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .danger-card ul { margin: 8px 0 0; }
+  .danger-card li { color: #6B1414; margin-bottom: 6px; }
+
+  .checklist {
+    margin: 24px 0; padding: 24px;
+    background: #F0FAF3; border: 1px solid #B7E4C7;
+    border-radius: 12px;
+  }
+  .checklist h4 {
+    color: #1B5E20; font-size: 17px; font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .checklist ul { list-style: none; padding: 0; margin: 0; }
+  .checklist li {
+    padding-left: 28px; position: relative;
+    margin-bottom: 8px; color: #1B5E20;
+  }
+  .checklist li::before {
+    content: '✓'; position: absolute; left: 0;
+    color: #2E7D32; font-weight: 700; font-size: 18px;
+  }
+
+  .table-wrap { overflow-x: auto; margin: 24px 0; }
+  table {
+    width: 100%; border-collapse: collapse;
+    background: var(--paper); border: 1px solid var(--hairline);
+    border-radius: 10px; overflow: hidden; font-size: 14px;
+  }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--hairline); }
+  th { background: var(--paper-3); font-weight: 600; color: var(--ink); font-size: 13px; }
+  tbody tr:last-child td { border-bottom: none; }
+  td strong { color: var(--apple-blue); }
+
+  .cta-block {
+    margin: 56px 0 0; padding: 36px 32px;
+    background: linear-gradient(135deg, var(--apple-blue), var(--apple-blue-deep));
+    border-radius: 18px; color: #fff; text-align: center;
+    box-shadow: 0 12px 32px rgba(10,132,255,0.25);
+  }
+  .cta-block h3 {
+    color: #fff; font-size: 24px; font-weight: 700;
+    letter-spacing: -0.02em; margin-bottom: 10px;
+  }
+  .cta-block p {
+    color: rgba(255,255,255,0.92); font-size: 15px;
+    margin-bottom: 22px; max-width: 480px;
+    margin-left: auto; margin-right: auto;
+  }
+  .cta-block .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff; color: var(--apple-blue-deep);
+    padding: 14px 28px; border-radius: 999px;
+    font-weight: 600; font-size: 15px; text-decoration: none;
+    transition: transform 0.25s ease;
+  }
+  .cta-block .btn:hover { transform: translateY(-2px); }
+
+  .author-card {
+    margin-top: 48px; padding: 24px;
+    background: var(--paper-3); border-radius: 14px;
+    display: flex; gap: 16px; align-items: center;
+  }
+  .author-card .avatar {
+    width: 56px; height: 56px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--apple-blue), var(--apple-blue-deep));
+    flex-shrink: 0; position: relative;
+  }
+  .author-card .avatar::before {
+    content: ''; position: absolute; inset: 14px;
+    border: 2px solid #fff; border-radius: 50%;
+  }
+  .author-card .avatar::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 6px; height: 6px; background: #fff; border-radius: 50%;
+  }
+  .author-card .info strong {
+    display: block; color: var(--ink); font-size: 15px; margin-bottom: 2px;
+  }
+  .author-card .info span { font-size: 13px; color: var(--gray-1); }
+
+  .related-posts {
+    margin-top: 48px; padding-top: 32px;
+    border-top: 1px solid var(--hairline);
+  }
+  .related-posts h4 {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gray-2); margin-bottom: 16px;
+  }
+  .related-posts ul { list-style: none; padding: 0; }
+  .related-posts li { margin-bottom: 10px; }
+  .related-posts a {
+    color: var(--ink); font-weight: 500; font-size: 15px;
+  }
+  .related-posts a:hover { color: var(--apple-blue); }
+
+  footer {
+    background: var(--ink); color: var(--paper-3);
+    padding: 40px 0; text-align: center;
+    font-family: 'Geist Mono', monospace; font-size: 11px;
+    letter-spacing: 0.06em; color: var(--gray-3);
+  }
+  footer a { color: var(--gray-3); }
+  footer a:hover { color: #fff; }
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="row">
+    <a href="../" class="brand">
+      <div class="mark"></div>
+      <span>IntraPC Solutions</span>
+    </a>
+    <nav class="links">
+      <a href="../#salud">Sector salud</a>
+      <a href="../#servicios">Servicios</a>
+      <a href="./">Blog</a>
+      <a href="../#contacto">Contacto</a>
+    </nav>
+    <a href="../#contacto" class="cta">Solicitar consultoría →</a>
+  </div>
+</header>
+
+<article class="container">
+
+  <div class="breadcrumb">
+    <a href="../">Inicio</a> · <a href="./">Blog</a> · Sector salud
+  </div>
+
+  <h1>Guía completa NOM-024-SSA3: Expediente Clínico Electrónico en México</h1>
+
+  <div class="post-meta">
+    <span class="cat">Sector salud</span>
+    <span>9 mayo 2026</span>
+    <span>· 10 min de lectura</span>
+  </div>
+
+  <div class="featured-img">
+    <img src="../assets/intrapcsolutions/pacs.webp" alt="Pantalla médica mostrando expediente clínico electrónico" />
+  </div>
+
+  <p class="lead">
+    Si manejas o vas a abrir una clínica, hospital o consultorio en México,
+    necesitas conocer la <strong>NOM-024-SSA3-2012</strong>. Es la norma
+    oficial que regula los Sistemas de Información de Registro Electrónico
+    para la Salud, y aplica a todos los establecimientos del Sistema
+    Nacional de Salud — públicos y privados. En esta guía te explicamos
+    qué exige, cómo cumplirla, qué pasa si no, y cuánto cuesta hacerlo bien.
+  </p>
+
+  <h2>¿Qué es la NOM-024-SSA3?</h2>
+
+  <p>
+    La NOM-024-SSA3-2012, publicada en el Diario Oficial de la Federación
+    el 30 de noviembre de 2012, establece los <strong>objetivos
+    funcionales y funcionalidades que deberán observar los productos de
+    Sistemas de Expediente Clínico Electrónico (ECE) para garantizar la
+    interoperabilidad, procesamiento, interpretación, confidencialidad,
+    seguridad y uso de estándares y catálogos de la información</strong>
+    en los servicios de salud.
+  </p>
+
+  <p>
+    En lenguaje claro: dice qué tiene que hacer cualquier software de
+    expediente clínico electrónico que se use en México, para que sea
+    legalmente válido y seguro para los pacientes.
+  </p>
+
+  <div class="info-card">
+    <div class="label">// Dato clave</div>
+    <h4>Aplica a TODOS los establecimientos de salud</h4>
+    <p>
+      No importa si es un consultorio individual, una clínica privada
+      pequeña, un centro de imagenología o un hospital de tercer nivel.
+      Si manejas información clínica de pacientes en formato electrónico,
+      tu sistema debe cumplir NOM-024-SSA3.
+    </p>
+  </div>
+
+  <h2>¿Qué exactamente exige la norma?</h2>
+
+  <p>
+    La NOM-024 establece requisitos obligatorios en 5 grandes áreas:
+  </p>
+
+  <h3>1. Funcionalidad clínica</h3>
+  <ul>
+    <li><strong>Captura completa del expediente:</strong> historia clínica,
+    notas de evolución, prescripciones, resultados de laboratorio,
+    estudios de imagen, signos vitales</li>
+    <li><strong>Plantillas configurables</strong> por especialidad médica</li>
+    <li><strong>Catálogos estandarizados:</strong> CIE-10 para diagnósticos,
+    ATC para medicamentos, LOINC para laboratorio</li>
+    <li><strong>Firma electrónica</strong> del médico responsable</li>
+    <li><strong>Receta médica electrónica</strong> con validaciones</li>
+  </ul>
+
+  <h3>2. Interoperabilidad</h3>
+  <ul>
+    <li><strong>Estándares HL7</strong> para intercambio de información
+    clínica entre sistemas</li>
+    <li><strong>DICOM</strong> para estudios de imagen médica</li>
+    <li>Capacidad de integrarse con otros sistemas hospitalarios
+    (RIS, LIS, PACS, ERP)</li>
+    <li>Generación de archivos compatibles con CFDI para facturación</li>
+  </ul>
+
+  <h3>3. Seguridad y confidencialidad</h3>
+  <ul>
+    <li><strong>Control de accesos por roles</strong> (médico,
+    enfermería, administrativo, etc.)</li>
+    <li><strong>Bitácora de auditoría completa:</strong> quién accedió
+    a qué expediente, cuándo y desde dónde</li>
+    <li><strong>Cifrado</strong> de datos sensibles en almacenamiento
+    y en tránsito</li>
+    <li>Cumplimiento con la <strong>LFPDPPP</strong> (Ley Federal de
+    Protección de Datos Personales en Posesión de Particulares)</li>
+    <li>Mecanismos de respaldo y recuperación ante desastres</li>
+  </ul>
+
+  <h3>4. Procesamiento y reportes</h3>
+  <ul>
+    <li>Generación automática de <strong>reportes de productividad</strong>
+    médica</li>
+    <li>Reportes para autoridades sanitarias (DGED, INEGI, IMSS, ISSSTE
+    según aplique)</li>
+    <li>Estadísticas operativas para toma de decisiones</li>
+  </ul>
+
+  <h3>5. Conservación de información</h3>
+  <p>
+    Los expedientes clínicos electrónicos deben conservarse mínimo
+    <strong>5 años a partir del último acto médico</strong>, en
+    condiciones que garanticen su integridad, autenticidad y disponibilidad.
+  </p>
+
+  <h2>¿Quiénes están obligados a cumplir la NOM-024?</h2>
+
+  <div class="checklist">
+    <h4>Establecimientos obligados</h4>
+    <ul>
+      <li>Hospitales públicos (Secretaría de Salud, IMSS, ISSSTE,
+      ISSEMyM, etc.)</li>
+      <li>Hospitales privados de cualquier tamaño</li>
+      <li>Clínicas privadas que usen sistemas electrónicos</li>
+      <li>Consultorios médicos con software de expediente</li>
+      <li>Centros de imagenología y laboratorios clínicos</li>
+      <li>Centros de rehabilitación y atención especializada</li>
+      <li>Aseguradoras médicas (para sus sistemas de gestión clínica)</li>
+      <li>Proveedores de software médico que vendan en México</li>
+    </ul>
+  </div>
+
+  <blockquote>
+    <strong>Nota crítica:</strong> Si todavía manejas tu clínica con
+    expedientes en papel, NOM-024 no aplica directamente — pero la
+    NOM-004-SSA3 sí lo regula. La NOM-024 entra en juego en el momento
+    que digitalizas, aunque sea parcialmente.
+  </blockquote>
+
+  <h2>¿Qué pasa si NO cumplo la NOM-024?</h2>
+
+  <div class="danger-card">
+    <h4>Sanciones por incumplimiento</h4>
+    <p>
+      La Secretaría de Salud, COFEPRIS y autoridades estatales pueden
+      aplicar las siguientes sanciones bajo la Ley General de Salud:
+    </p>
+    <ul>
+      <li><strong>Amonestación</strong> con apercibimiento</li>
+      <li><strong>Multa económica</strong> de 50 a 16,000 días de
+      salario mínimo (de ~$5,000 hasta ~$1,600,000 MXN según gravedad)</li>
+      <li><strong>Clausura temporal o definitiva</strong> del
+      establecimiento</li>
+      <li><strong>Arresto</strong> hasta por 36 horas en casos graves</li>
+      <li>Pérdida de licencia sanitaria</li>
+      <li>Acciones civiles por parte de pacientes afectados (LFPDPPP)</li>
+    </ul>
+  </div>
+
+  <p>
+    Más allá de la sanción legal, los riesgos REALES de un ECE no
+    conforme con NOM-024 son:
+  </p>
+
+  <ul>
+    <li><strong>Pérdida de información médica</strong> sin respaldos
+    adecuados</li>
+    <li><strong>Filtraciones de datos de pacientes</strong> que generan
+    demandas y daño reputacional</li>
+    <li><strong>Imposibilidad de auditar</strong> quién accedió a qué
+    información (problema legal)</li>
+    <li><strong>Documentos clínicos sin validez legal</strong> en
+    procesos judiciales</li>
+    <li><strong>Pérdida de certificaciones</strong> hospitalarias
+    (CSG, JCI)</li>
+  </ul>
+
+  <h2>¿Cómo se verifica que un ECE cumpla NOM-024?</h2>
+
+  <p>
+    El proceso oficial de validación lo realiza la
+    <strong>Dirección General de Información en Salud (DGIS)</strong> de
+    la Secretaría de Salud. Hay dos niveles:
+  </p>
+
+  <h3>Validación NOM-024 (mínimo legal)</h3>
+  <p>
+    Verificación documental y técnica de que el sistema cumple los
+    requisitos básicos. Es lo MÍNIMO para operar legalmente. La maneja
+    la propia DGIS.
+  </p>
+
+  <h3>Certificación CENETEC (recomendado)</h3>
+  <p>
+    Certificación voluntaria pero altamente recomendada. La emite el
+    Centro Nacional de Excelencia Tecnológica en Salud. Un sistema
+    certificado por CENETEC tiene mayor aceptación por parte de
+    aseguradoras, hospitales grandes y procesos de licitación pública.
+  </p>
+
+  <h2>¿Cuánto cuesta implementar un ECE conforme a NOM-024?</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo de establecimiento</th>
+        <th>Modalidad</th>
+        <th>Inversión inicial</th>
+        <th>Mantenimiento anual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Consultorio individual</td>
+        <td>SaaS / Cloud</td>
+        <td><strong>$15,000 - $40,000</strong></td>
+        <td>$8,000 - $24,000</td>
+      </tr>
+      <tr>
+        <td>Clínica pequeña (2-5 médicos)</td>
+        <td>Cloud o híbrido</td>
+        <td><strong>$60,000 - $150,000</strong></td>
+        <td>$30,000 - $80,000</td>
+      </tr>
+      <tr>
+        <td>Clínica mediana (6-15 médicos)</td>
+        <td>Híbrido</td>
+        <td><strong>$200,000 - $500,000</strong></td>
+        <td>$80,000 - $200,000</td>
+      </tr>
+      <tr>
+        <td>Hospital pequeño-mediano</td>
+        <td>On-premise</td>
+        <td><strong>$600,000 - $2,000,000</strong></td>
+        <td>$200,000 - $500,000</td>
+      </tr>
+      <tr>
+        <td>Hospital grande / red</td>
+        <td>Enterprise</td>
+        <td><strong>$2,000,000+</strong></td>
+        <td>$500,000+</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>
+    Estos rangos incluyen software, integración con sistemas existentes,
+    capacitación, validación técnica y soporte inicial. NO incluyen
+    hardware (servidores, equipos de cómputo).
+  </p>
+
+  <h2>¿Cómo elegir un proveedor que cumpla NOM-024?</h2>
+
+  <div class="checklist">
+    <h4>Checklist para evaluar proveedores</h4>
+    <ul>
+      <li>Cuenta con validación NOM-024 demostrable (no solo "afirma" que cumple)</li>
+      <li>Idealmente cuenta con certificación CENETEC vigente</li>
+      <li>Maneja estándares HL7 v2/v3, FHIR y DICOM nativo</li>
+      <li>Catálogos CIE-10, ATC, LOINC actualizados</li>
+      <li>Firma electrónica avanzada (e.firma SAT integrable)</li>
+      <li>Bitácora de auditoría completa con sellos de tiempo</li>
+      <li>Cifrado AES-256 mínimo, TLS 1.3 en transmisión</li>
+      <li>Política clara de respaldos y plan de recuperación ante desastres</li>
+      <li>Acuerdo de confidencialidad (NDA) y aviso de privacidad LFPDPPP</li>
+      <li>Soporte técnico 24/7 con SLA por escrito</li>
+      <li>Capacitación incluida para todo tu personal</li>
+      <li>Casos de éxito en clínicas similares a la tuya en México</li>
+      <li>Garantía de portabilidad de datos al cierre del contrato</li>
+    </ul>
+  </div>
+
+  <h2>Errores comunes al implementar un ECE</h2>
+
+  <div class="warning-card">
+    <h4>⚠️ Lo que NO debes hacer</h4>
+    <p style="margin-bottom: 12px;">Errores frecuentes que vemos en clínicas que implementan ECE por su cuenta:</p>
+    <ul style="padding-left: 20px;">
+      <li>Comprar software extranjero sin adaptación a NOM-024 mexicana</li>
+      <li>Usar sistemas "todo-en-uno" gratuitos sin validación oficial</li>
+      <li>Capacitar solo al gerente y no a todo el equipo médico</li>
+      <li>No migrar el histórico de expedientes (queda en limbo legal)</li>
+      <li>No documentar el proceso de implementación (problema en auditorías)</li>
+      <li>No firmar contrato de confidencialidad con el proveedor</li>
+      <li>No tener plan B si el proveedor cierra (portabilidad de datos)</li>
+    </ul>
+  </div>
+
+  <h2>Recomendaciones finales</h2>
+
+  <p>
+    Implementar un ECE conforme a NOM-024 no es un gasto — es una
+    inversión que protege tu operación legal, tus pacientes y tu
+    reputación. Hazlo bien desde el principio:
+  </p>
+
+  <ol>
+    <li><strong>Contrata asesoría especializada</strong> antes de comprar
+    cualquier software. El costo de la asesoría es 10x menor al costo de
+    elegir mal.</li>
+    <li><strong>Pide demos REALES con tus casos de uso</strong>, no demos
+    genéricas comerciales.</li>
+    <li><strong>Verifica las referencias</strong> del proveedor — habla
+    con sus clientes existentes.</li>
+    <li><strong>Negocia contrato de portabilidad de datos</strong> antes
+    de firmar.</li>
+    <li><strong>Capacita a TODO tu equipo</strong> — la mayoría de las
+    fallas son humanas.</li>
+    <li><strong>Audita anualmente</strong> el cumplimiento de NOM-024 y
+    LFPDPPP en tu sistema.</li>
+  </ol>
+
+  <div class="cta-block">
+    <h3>¿Necesitas implementar un ECE conforme NOM-024?</h3>
+    <p>
+      En IntraPC Solutions implementamos sistemas de Expediente Clínico
+      Electrónico que cumplen NOM-024-SSA3 desde Guadalajara para todo
+      México. Trabajamos con NDA desde el primer contacto y respondemos
+      en menos de 24 horas hábiles.
+    </p>
+    <a href="../#contacto" class="btn">Solicitar consultoría sin compromiso →</a>
+  </div>
+
+  <div class="related-posts">
+    <h4>Lectura relacionada</h4>
+    <ul>
+      <li><a href="que-es-pacs-y-cuando-lo-necesita-tu-clinica.html">
+        ¿Qué es un sistema PACS y cuándo lo necesita tu clínica? →
+      </a></li>
+    </ul>
+  </div>
+
+  <div class="author-card">
+    <div class="avatar"></div>
+    <div class="info">
+      <strong>IntraPC Solutions · Orbix Studio</strong>
+      <span>Más de 10 años implementando tecnología en sector salud y empresarial mexicano. Guadalajara, Jalisco.</span>
+    </div>
+  </div>
+
+</article>
+
+<footer>
+  <div class="container">
+    © 2026 IntraPC Solutions · Orbix Studio · <a href="../">Volver al inicio</a> · <a href="./">Más artículos</a>
+  </div>
+</footer>
+
+</body>
+</html>
