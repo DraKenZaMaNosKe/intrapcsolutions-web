@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /privado/
 
 # AI training crawlers — explicitly allow (you want exposure)
 User-agent: GPTBot
