@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Política de Privacidad · Pixora IA · Orbix Studio</title>
+<meta name="description" content="Política de privacidad de la aplicación Pixora IA (Orbix Studio). Cumplimiento LFPDPPP México + GDPR. Última actualización: mayo 2026." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#1F1B17" />
+<link rel="canonical" href="https://intrapcsolutions.com/privacidad/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://intrapcsolutions.com/privacidad/" />
+<meta property="og:title" content="Política de Privacidad — Pixora IA" />
+<meta property="og:description" content="Cómo Pixora IA trata tus datos. Cumplimiento LFPDPPP México + GDPR." />
+<meta property="og:site_name" content="Orbix Studio" />
+<meta property="og:locale" content="es_MX" />
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231F1B17'/%3E%3Ctext x='50' y='62' font-family='Georgia,serif' font-size='44' font-style='italic' fill='%23E0B47A' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #FAFAF7;
+    --paper: #FFFFFF;
+    --ink: #1A1815;
+    --ink-dim: #4A463F;
+    --ink-faint: #8A8478;
+    --brass: #B08D57;
+    --brass-bright: #D4AF37;
+    --foil-1: #E0B47A;
+    --foil-2: #F4D6B8;
+    --foil-3: #6EE7B7;
+    --rule: rgba(26,24,21,0.10);
+    --shadow: 0 2px 16px rgba(26,24,21,0.04), 0 1px 4px rgba(26,24,21,0.06);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+  }
+  /* Foil ribbon — matches Pixora app identity */
+  body::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient(90deg, var(--foil-1), var(--foil-2), #FFF, var(--foil-3), var(--foil-1));
+    background-size: 200% 100%;
+    animation: foilShift 5s linear infinite;
+  }
+  @keyframes foilShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 28px 96px;
+  }
+  header.doc-head {
+    margin-bottom: 48px;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2.4px;
+    color: var(--brass);
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .lede {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-dim);
+    max-width: 560px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.5px;
+  }
+  .meta-bar span + span::before { content: '·'; margin: 0 8px; color: var(--ink-faint); }
+  .lang-pill {
+    margin-left: auto;
+    display: inline-flex;
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .lang-pill a {
+    padding: 4px 12px;
+    color: var(--ink-faint);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .lang-pill a.active { background: var(--ink); color: var(--paper); }
+  /* Sections */
+  section { margin-bottom: 38px; }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+  h2::before {
+    content: attr(data-num);
+    display: inline-block;
+    margin-right: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--brass);
+    font-weight: 700;
+    letter-spacing: 0;
+    vertical-align: middle;
+  }
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--brass);
+    margin: 20px 0 10px;
+  }
+  p { margin-bottom: 12px; color: var(--ink); }
+  p strong { color: var(--ink); font-weight: 600; }
+  ul { margin: 8px 0 16px 22px; }
+  li { margin-bottom: 8px; }
+  li strong { color: var(--ink); }
+  a { color: var(--brass); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--brass-bright); }
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    font-size: 14px;
+  }
+  .data-table th {
+    text-align: left;
+    background: #F5F2EC;
+    padding: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    border-bottom: 1px solid var(--rule);
+  }
+  .data-table td {
+    padding: 12px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--rule);
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td strong { color: var(--ink); }
+  /* Callout */
+  .callout {
+    background: #FCF7EE;
+    border-left: 3px solid var(--brass);
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--ink-dim);
+  }
+  .callout strong { color: var(--ink); }
+  /* Contact card */
+  .contact-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px;
+    margin-top: 32px;
+    box-shadow: var(--shadow);
+  }
+  .contact-card h2 { color: var(--paper); }
+  .contact-card h2::before { color: var(--foil-1); }
+  .contact-card p { color: rgba(255,255,255,0.78); }
+  .contact-card a { color: var(--foil-1); }
+  .contact-card a:hover { color: var(--foil-2); }
+  /* Footer */
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    color: var(--ink-faint);
+  }
+  footer a { color: var(--brass); }
+  /* English block hidden by default; toggled with a class */
+  body.lang-en .es { display: none; }
+  body:not(.lang-en) .en { display: none; }
+  /* Mobile */
+  @media (max-width: 640px) {
+    .container { padding: 40px 20px 64px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 22px; }
+    .data-table { font-size: 13px; }
+    .data-table td, .data-table th { padding: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body::before { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="doc-head">
+    <div class="eyebrow es">// PIXORA IA · POLÍTICA DE PRIVACIDAD</div>
+    <div class="eyebrow en">// PIXORA IA · PRIVACY POLICY</div>
+    <h1 class="es">Política de Privacidad.</h1>
+    <h1 class="en">Privacy Policy.</h1>
+    <p class="lede es">
+      Cómo Pixora IA recopila, usa y protege tus datos. Escrita en lenguaje
+      claro — sin letras chicas, sin trampas.
+    </p>
+    <p class="lede en">
+      How Pixora IA collects, uses, and protects your data. Written in plain
+      language — no small print, no tricks.
+    </p>
+    <div class="meta-bar">
+      <span class="es">Vigente desde: 17 de mayo de 2026</span>
+      <span class="en">Effective: May 17, 2026</span>
+      <span class="es">Versión 2.0</span>
+      <span class="en">Version 2.0</span>
+      <span class="es">Aplica a la app Pixora IA (Android)</span>
+      <span class="en">Applies to Pixora IA (Android app)</span>
+      <span class="lang-pill">
+        <a href="?lang=es" class="active" id="lang-es">ES</a>
+        <a href="?lang=en" id="lang-en">EN</a>
+      </span>
+    </div>
+  </header>
+
+  <!-- ─────────────────────── ESPAÑOL ─────────────────────── -->
+  <div class="es">
+
+    <section>
+      <h2 data-num="1.">Quiénes somos</h2>
+      <p>
+        <strong>Pixora IA</strong> es una aplicación desarrollada por
+        <strong>Orbix Studio</strong>, marca de Eduardo Jiménez (persona
+        física con actividad empresarial), con domicilio en Guadalajara,
+        Jalisco, México. Esta política aplica a la app móvil para Android
+        publicada en Google Play bajo el paquete
+        <code>com.orbix.pixora</code>.
+      </p>
+      <p>
+        Como responsable del tratamiento de tus datos personales, cumplimos
+        con la <strong>Ley Federal de Protección de Datos Personales en
+        Posesión de los Particulares (LFPDPPP)</strong> de México y, cuando
+        aplica, con el <strong>Reglamento General de Protección de Datos
+        (RGPD/GDPR)</strong> de la Unión Europea.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="2.">Resumen rápido</h2>
+      <ul>
+        <li><strong>La app funciona sin cuenta.</strong> Puedes usar Pixora
+          IA sin iniciar sesión y sin compartir datos personales.</li>
+        <li><strong>El inicio de sesión es opcional.</strong> Solo si quieres
+          sincronizar favoritos entre dispositivos o generar imágenes con
+          IA.</li>
+        <li><strong>No vendemos tus datos.</strong> Nunca. A nadie.</li>
+        <li><strong>Anuncios:</strong> mostramos anuncios de Google AdMob
+          (calificación familiar G) que financian la app.</li>
+        <li><strong>Niños:</strong> Pixora IA no está dirigida a menores de
+          13 años.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-num="3.">Qué datos recopilamos y para qué</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Datos</th>
+            <th>Por qué</th>
+            <th>Dónde se guarda</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cuenta (opcional)</strong></td>
+            <td>Email, nombre, foto de perfil, ID de Google</td>
+            <td>Sincronizar tus favoritos entre dispositivos</td>
+            <td>Supabase (servidor)</td>
+          </tr>
+          <tr>
+            <td><strong>Generación IA</strong></td>
+            <td>Texto del prompt, estilo, URL del resultado</td>
+            <td>Generar wallpapers personalizados + tu historial</td>
+            <td>Supabase (vinculado a tu cuenta)</td>
+          </tr>
+          <tr>
+            <td><strong>Perfil astral</strong></td>
+            <td>Nombre, fecha de nacimiento (día/mes/año)</td>
+            <td>Calcular tu signo zodiacal en la sección Arcano</td>
+            <td>Solo en tu dispositivo (Hive local). Nunca se envía.</td>
+          </tr>
+          <tr>
+            <td><strong>Preferencias</strong></td>
+            <td>Favoritos, tema visual, overlays, efecto al tocar</td>
+            <td>Recordar tus ajustes entre sesiones</td>
+            <td>Solo en tu dispositivo</td>
+          </tr>
+          <tr>
+            <td><strong>Diamantes (créditos)</strong></td>
+            <td>Saldo actual, eventos ganados/gastados</td>
+            <td>Economía de la app (ganas viendo ads, gastas en IA)</td>
+            <td>Dispositivo + Supabase si tienes cuenta</td>
+          </tr>
+          <tr>
+            <td><strong>Suscripción Pixora Plus</strong></td>
+            <td>Estado de suscripción + token de compra</td>
+            <td>Validar acceso a funciones premium</td>
+            <td>Google Play Billing + Supabase</td>
+          </tr>
+          <tr>
+            <td><strong>Estadísticas anónimas</strong></td>
+            <td>Vistas, descargas, aplicaciones de wallpapers (IDs anónimos)</td>
+            <td>Saber qué contenido funciona mejor</td>
+            <td>Supabase (sin vincular a tu identidad)</td>
+          </tr>
+          <tr>
+            <td><strong>Notificaciones push</strong></td>
+            <td>Token FCM del dispositivo</td>
+            <td>Avisarte cuando hay contenido nuevo</td>
+            <td>Firebase + tu dispositivo</td>
+          </tr>
+          <tr>
+            <td><strong>Publicidad</strong></td>
+            <td>ID de publicidad de Google (cuando ves un ad)</td>
+            <td>Mostrar anuncios. Calificación G (familiar).</td>
+            <td>Gestionado por Google AdMob</td>
+          </tr>
+          <tr>
+            <td><strong>Aceptación de términos</strong></td>
+            <td>Marca booleana, versión, timestamp</td>
+            <td>Registro legal de tu aceptación</td>
+            <td>Supabase</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>Nota importante:</strong> los wallpapers, las descargas y los
+        favoritos NO te identifican personalmente si no inicias sesión. Los
+        datos sensibles que están vinculados a tu identidad solo existen
+        cuando tú decides crear cuenta con Google.
+      </div>
+    </section>
+
+    <section>
+      <h2 data-num="4.">Permisos que pedimos en Android</h2>
+      <ul>
+        <li><strong>Internet:</strong> descargar wallpapers, sincronizar tus
+          favoritos, generar imágenes con IA.</li>
+        <li><strong>Definir wallpaper / Servicio de fondo de pantalla:</strong>
+          aplicar el wallpaper que elegiste.</li>
+        <li><strong>Modificar configuración del sistema:</strong> aplicar
+          tonos de llamada / notificación / alarma (solo si lo eliges).</li>
+        <li><strong>Notificaciones:</strong> avisarte de contenido nuevo. Lo
+          puedes desactivar en Ajustes del sistema.</li>
+        <li><strong>Servicio en primer plano:</strong> auto-rotación de
+          wallpapers (Pixora Daily) y ciclos del día.</li>
+        <li><strong>Facturación:</strong> suscripción Pixora Plus vía Google
+          Play.</li>
+        <li><strong>Estado de red:</strong> saber si tienes conexión para
+          mostrar el contenido adecuado (cache vs en vivo).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-num="5.">Con quién compartimos tus datos</h2>
+      <p>
+        Trabajamos con los siguientes proveedores. Cada uno aplica su propia
+        política de privacidad:
+      </p>
+      <ul>
+        <li><strong>Google AdMob</strong> — publicidad
+          (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">políticas Google</a>).</li>
+        <li><strong>Google Firebase</strong> — notificaciones push (Cloud
+          Messaging) y reportes de errores.</li>
+        <li><strong>Google Play Billing</strong> — gestión de suscripciones.</li>
+        <li><strong>Google Sign-In</strong> — autenticación opcional.</li>
+        <li><strong>Supabase</strong> — base de datos backend (hosteado en
+          la UE) — <a href="https://supabase.com/privacy" target="_blank" rel="noopener">políticas Supabase</a>.</li>
+      </ul>
+      <p>
+        <strong>No vendemos, alquilamos ni intercambiamos</strong> tus datos
+        personales con terceros para fines de marketing.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="6.">Cuánto tiempo conservamos tus datos</h2>
+      <ul>
+        <li><strong>Datos en tu dispositivo:</strong> hasta que desinstales
+          la app o limpies los datos desde Ajustes de Android.</li>
+        <li><strong>Cuenta (si la creaste):</strong> mientras tu cuenta esté
+          activa. Puedes eliminarla en cualquier momento desde Settings →
+          Eliminar mi cuenta (borra todo: diamantes, favoritos sincronizados,
+          historial de IA).</li>
+        <li><strong>Estadísticas anónimas:</strong> hasta 24 meses.</li>
+        <li><strong>Logs de aceptación de términos:</strong> mientras tu
+          cuenta exista (requisito legal).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-num="7.">Tus derechos (ARCO + GDPR)</h2>
+      <p>
+        Tienes derecho a:
+      </p>
+      <ul>
+        <li><strong>Acceder</strong> a los datos que tenemos sobre ti.</li>
+        <li><strong>Rectificar</strong> datos inexactos.</li>
+        <li><strong>Cancelar (eliminar)</strong> tus datos. La app ofrece un
+          botón directo: Settings → Eliminar mi cuenta.</li>
+        <li><strong>Oponerte</strong> al tratamiento.</li>
+        <li><strong>Portabilidad:</strong> pedirnos un export de tus datos.</li>
+      </ul>
+      <p>
+        Para ejercer cualquier derecho ARCO o GDPR, escríbenos a
+        <a href="mailto:eduardojcr@gmail.com">eduardojcr@gmail.com</a>.
+        Respondemos en máximo 20 días hábiles.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="8.">Niños menores de 13 años</h2>
+      <p>
+        Pixora IA <strong>no está dirigida a menores de 13 años</strong>. No
+        recopilamos conscientemente datos de menores. Si te enteras de que
+        un menor de 13 nos compartió datos, escríbenos y los eliminamos
+        inmediatamente.
+      </p>
+      <p>
+        Los anuncios mostrados en la app están calificados con
+        <strong>contenido G (familiar)</strong> por AdMob — sin contenido
+        sexual, violento ni inapropiado.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="9.">Seguridad de tus datos</h2>
+      <p>
+        Toda la comunicación entre la app y nuestros servidores usa
+        <strong>HTTPS/TLS</strong>. Las contraseñas no las manejamos
+        directamente — el inicio de sesión es vía Google OAuth. Los datos
+        almacenados en Supabase aplican
+        <strong>Row Level Security (RLS)</strong> — solo tú puedes acceder a
+        tus propios datos.
+      </p>
+      <p>
+        Si alguna vez detectamos un incidente de seguridad que afecte tus
+        datos, te notificaremos por email y dentro de la app dentro de las
+        72 horas siguientes, según lo exige el GDPR.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="10.">Cambios a esta política</h2>
+      <p>
+        Si actualizamos esta política significativamente, te avisaremos en
+        la app antes de que los cambios entren en vigor. La versión actual
+        y la fecha de vigencia siempre estarán arriba en este documento.
+      </p>
+    </section>
+
+    <div class="contact-card">
+      <h2 data-num="11." style="margin-bottom: 14px;">Contacto</h2>
+      <p style="margin-bottom: 6px;"><strong style="color: white;">Responsable de datos:</strong> Eduardo Jiménez (Orbix Studio)</p>
+      <p style="margin-bottom: 6px;"><strong style="color: white;">Email:</strong> <a href="mailto:eduardojcr@gmail.com">eduardojcr@gmail.com</a></p>
+      <p style="margin-bottom: 6px;"><strong style="color: white;">Soporte:</strong> <a href="mailto:testerorbix@gmail.com">testerorbix@gmail.com</a></p>
+      <p style="margin-bottom: 0;"><strong style="color: white;">Ubicación:</strong> Guadalajara, Jalisco, México</p>
+    </div>
+
+  </div>
+
+  <!-- ─────────────────────── ENGLISH ─────────────────────── -->
+  <div class="en">
+
+    <section>
+      <h2 data-num="1.">Who we are</h2>
+      <p>
+        <strong>Pixora IA</strong> is an Android app developed by
+        <strong>Orbix Studio</strong>, the trade name of Eduardo Jiménez
+        (sole proprietor), based in Guadalajara, Jalisco, Mexico. This
+        policy applies to the Android app published on Google Play under the
+        package <code>com.orbix.pixora</code>.
+      </p>
+      <p>
+        As the data controller, we comply with Mexico's
+        <strong>Federal Law on Protection of Personal Data Held by Private
+        Parties (LFPDPPP)</strong> and, where applicable, the EU's
+        <strong>General Data Protection Regulation (GDPR)</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="2.">Quick summary</h2>
+      <ul>
+        <li><strong>The app works without an account.</strong> You can use
+          Pixora IA without signing in or sharing any personal data.</li>
+        <li><strong>Sign-in is optional.</strong> Only needed to sync
+          favorites across devices or to generate AI images.</li>
+        <li><strong>We do not sell your data.</strong> Ever. To anyone.</li>
+        <li><strong>Ads:</strong> we show Google AdMob ads (family-friendly
+          G rating) that support the app.</li>
+        <li><strong>Children:</strong> Pixora IA is not directed at children
+          under 13.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-num="3.">What we collect and why</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Category</th><th>Data</th><th>Why</th><th>Where stored</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Account (optional)</strong></td><td>Email, name, profile picture, Google ID</td><td>Sync your favorites across devices</td><td>Supabase (server)</td></tr>
+          <tr><td><strong>AI generation</strong></td><td>Prompt text, style, result URL</td><td>Generate custom wallpapers + your history</td><td>Supabase (linked to your account)</td></tr>
+          <tr><td><strong>Astral profile</strong></td><td>Name, birthdate (day/month/year)</td><td>Compute your zodiac sign in the Arcano section</td><td>On your device only (local Hive). Never uploaded.</td></tr>
+          <tr><td><strong>Preferences</strong></td><td>Favorites, theme, overlays, touch effect</td><td>Remember your settings</td><td>On your device only</td></tr>
+          <tr><td><strong>Diamonds (credits)</strong></td><td>Current balance, earn/spend events</td><td>App economy (earn via ads, spend on AI)</td><td>Device + Supabase if you have an account</td></tr>
+          <tr><td><strong>Pixora Plus subscription</strong></td><td>Subscription status + purchase token</td><td>Validate premium access</td><td>Google Play Billing + Supabase</td></tr>
+          <tr><td><strong>Anonymous stats</strong></td><td>Views, downloads, applies (anonymous IDs)</td><td>Know what content works best</td><td>Supabase (not linked to your identity)</td></tr>
+          <tr><td><strong>Push notifications</strong></td><td>Device FCM token</td><td>Notify you when new content arrives</td><td>Firebase + your device</td></tr>
+          <tr><td><strong>Advertising</strong></td><td>Google Advertising ID (when you see an ad)</td><td>Display ads. G rating (family-friendly).</td><td>Managed by Google AdMob</td></tr>
+          <tr><td><strong>Terms acceptance</strong></td><td>Boolean flag, version, timestamp</td><td>Legal record of your acceptance</td><td>Supabase</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>Important note:</strong> wallpapers, downloads, and
+        favorites do NOT personally identify you if you don't sign in. Data
+        linked to your identity exists only when you choose to create a
+        Google account.
+      </div>
+    </section>
+
+    <section>
+      <h2 data-num="4.">Android permissions we request</h2>
+      <ul>
+        <li><strong>Internet:</strong> download wallpapers, sync favorites,
+          generate AI images.</li>
+        <li><strong>Set wallpaper / Wallpaper service:</strong> apply the
+          wallpaper you choose.</li>
+        <li><strong>Modify system settings:</strong> apply ringtones /
+          notifications / alarms (only if you choose to).</li>
+        <li><strong>Notifications:</strong> notify you of new content. You
+          can disable in system Settings.</li>
+        <li><strong>Foreground service:</strong> auto-rotate wallpapers
+          (Pixora Daily) and day cycles.</li>
+        <li><strong>Billing:</strong> Pixora Plus subscription via Google
+          Play.</li>
+        <li><strong>Network state:</strong> know if you're online to choose
+          the right content path (cache vs live).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-num="5.">Who we share data with</h2>
+      <p>We work with the following providers. Each has its own privacy policy:</p>
+      <ul>
+        <li><strong>Google AdMob</strong> — advertising
+          (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google policies</a>).</li>
+        <li><strong>Google Firebase</strong> — push notifications (Cloud
+          Messaging) and crash reports.</li>
+        <li><strong>Google Play Billing</strong> — subscription management.</li>
+        <li><strong>Google Sign-In</strong> — optional authentication.</li>
+        <li><strong>Supabase</strong> — backend database (EU-hosted) —
+          <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase policies</a>.</li>
+      </ul>
+      <p>
+        <strong>We do not sell, rent, or trade</strong> your personal data
+        with third parties for marketing purposes.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="6.">How long we keep your data</h2>
+      <ul>
+        <li><strong>Device data:</strong> until you uninstall the app or
+          clear app data in Android Settings.</li>
+        <li><strong>Account (if you created one):</strong> as long as your
+          account is active. You can delete it anytime from Settings →
+          Delete my account (removes everything: diamonds, synced
+          favorites, AI history).</li>
+        <li><strong>Anonymous stats:</strong> up to 24 months.</li>
+        <li><strong>Terms acceptance logs:</strong> while your account
+          exists (legal requirement).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-num="7.">Your rights (ARCO + GDPR)</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> the data we hold about you.</li>
+        <li><strong>Rectify</strong> inaccurate data.</li>
+        <li><strong>Erase</strong> your data. The app provides a direct
+          button: Settings → Delete my account.</li>
+        <li><strong>Object</strong> to processing.</li>
+        <li><strong>Portability:</strong> request an export of your data.</li>
+      </ul>
+      <p>
+        To exercise any ARCO or GDPR right, write to
+        <a href="mailto:eduardojcr@gmail.com">eduardojcr@gmail.com</a>.
+        We respond within 20 business days max.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="8.">Children under 13</h2>
+      <p>
+        Pixora IA is <strong>not directed at children under 13</strong>. We
+        do not knowingly collect data from minors. If you learn that a child
+        under 13 has shared data with us, contact us and we will delete it
+        immediately.
+      </p>
+      <p>
+        Ads shown in the app are rated <strong>G (family-friendly)</strong>
+        by AdMob — no sexual, violent, or inappropriate content.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="9.">Data security</h2>
+      <p>
+        All communication between the app and our servers uses
+        <strong>HTTPS/TLS</strong>. We do not handle passwords directly —
+        sign-in is via Google OAuth. Data stored in Supabase enforces
+        <strong>Row Level Security (RLS)</strong> — only you can access
+        your own data.
+      </p>
+      <p>
+        If we ever detect a security incident affecting your data, we'll
+        notify you by email and within the app within 72 hours, as required
+        by GDPR.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-num="10.">Changes to this policy</h2>
+      <p>
+        If we update this policy significantly, we'll notify you in the app
+        before changes take effect. The current version and effective date
+        are always at the top of this document.
+      </p>
+    </section>
+
+    <div class="contact-card">
+      <h2 data-num="11." style="margin-bottom: 14px;">Contact</h2>
+      <p style="margin-bottom: 6px;"><strong style="color: white;">Data controller:</strong> Eduardo Jiménez (Orbix Studio)</p>
+      <p style="margin-bottom: 6px;"><strong style="color: white;">Email:</strong> <a href="mailto:eduardojcr@gmail.com">eduardojcr@gmail.com</a></p>
+      <p style="margin-bottom: 6px;"><strong style="color: white;">Support:</strong> <a href="mailto:testerorbix@gmail.com">testerorbix@gmail.com</a></p>
+      <p style="margin-bottom: 0;"><strong style="color: white;">Location:</strong> Guadalajara, Jalisco, Mexico</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+      © 2026 Orbix Studio · Pixora IA · Made in Guadalajara, MX
+      &nbsp;·&nbsp;
+      <a href="https://intrapcsolutions.com/">intrapcsolutions.com</a>
+    </p>
+  </footer>
+
+</div>
+
+<script>
+  // Tiny language toggle — respects ?lang=en query param
+  (function() {
+    var url = new URL(window.location.href);
+    var lang = url.searchParams.get('lang');
+    if (lang === 'en') {
+      document.body.classList.add('lang-en');
+      document.getElementById('lang-en').classList.add('active');
+      document.getElementById('lang-es').classList.remove('active');
+      document.documentElement.lang = 'en';
+    }
+  })();
+</script>
+</body>
+</html>
