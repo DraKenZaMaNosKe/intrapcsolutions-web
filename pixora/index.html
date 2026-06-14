@@ -474,7 +474,12 @@
       <input type="hidden" name="access_key" value="b96ff052-fb85-40ac-8994-db9b0185245a" />
       <input type="hidden" name="subject" value="Pixora Beta Pre-registro · nuevo lead" />
       <input type="hidden" name="from_name" value="Pixora Beta Landing" />
-      <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <!-- Honeypot reforzado: posicionado off-screen (no display:none, que
+           algunos bots detectan) + aria-hidden + tabindex -1. Si tiene
+           valor cuando se manda el form → es un bot, rechazamos sin alertar. -->
+      <div style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+        <label>No llenar este campo: <input type="text" name="botcheck" tabindex="-1" autocomplete="off" /></label>
+      </div>
 
       <div class="form-row">
         <input type="email" name="email" required placeholder="tu-email@gmail.com" autocomplete="email" />
@@ -832,18 +837,94 @@ setInterval(()=>{
   }
 }, 8000);
 
-// ── form submit ──
+// ── form submit con anti-spam multi-capa ──
 const form = document.getElementById('pre-form');
 const status = document.getElementById('status');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+// Email regex razonable (no perfecto pero filtra basura obvia)
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+// Dominios de email desechable conocidos — bots los usan para evadir dedup.
+// No es exhaustivo, solo los más comunes en 2026.
+const THROWAWAY_DOMAINS = new Set([
+  'mailinator.com','10minutemail.com','tempmail.com','tempmail.net',
+  'guerrillamail.com','guerrillamail.net','sharklasers.com','grr.la',
+  'yopmail.com','throwawaymail.com','getairmail.com','maildrop.cc',
+  'dispostable.com','fakeinbox.com','trashmail.com','mvrht.net',
+  'spamgourmet.com','mintemail.com','mohmal.com','tempr.email',
+]);
+
+// Rate limit: máx 1 submit cada 30s a nivel browser + dedup por email
+const RATE_LIMIT_MS = 30000;
+const STORAGE_KEY_LAST = 'pixora_last_submit';
+const STORAGE_KEY_EMAILS = 'pixora_submitted_emails';
+
+function getSubmittedEmails(){
+  try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY_EMAILS) || '[]')); }
+  catch { return new Set(); }
+}
+function rememberEmail(em){
+  const s = getSubmittedEmails(); s.add(em);
+  try { localStorage.setItem(STORAGE_KEY_EMAILS, JSON.stringify([...s].slice(-50))); } catch {}
+}
+
 form.addEventListener('submit', async (e)=>{
   e.preventDefault();
-  const email = form.email.value.trim();
+  const email = form.email.value.trim().toLowerCase();
   const acepto = form.acepto.checked;
+  const botcheck = form.botcheck ? form.botcheck.value : '';
+
+  // ── Capa 1: honeypot — bot detectado, fail silently
+  if (botcheck) {
+    // Mostramos "ok" para no alertar al bot que lo cachamos.
+    status.textContent = '✓ Listo. Revisa tu inbox.';
+    status.className = 'form-status ok';
+    return;
+  }
+
+  // ── Capa 2: validaciones básicas
   if (!email || !acepto){
     status.textContent = '✕ Necesito tu email + el check de privacidad.';
     status.className = 'form-status err';
     return;
   }
+  if (!EMAIL_RE.test(email)){
+    status.textContent = '✕ Ese email no se ve bien. Revísalo porfa.';
+    status.className = 'form-status err';
+    return;
+  }
+
+  // ── Capa 3: throwaway domain block
+  const domain = email.split('@')[1] || '';
+  if (THROWAWAY_DOMAINS.has(domain)){
+    status.textContent = '✕ Usa un email real porfa, no uno desechable.';
+    status.className = 'form-status err';
+    return;
+  }
+
+  // ── Capa 4: rate limit (30s entre submits, no importa el email)
+  const lastTs = parseInt(localStorage.getItem(STORAGE_KEY_LAST) || '0', 10);
+  const since = Date.now() - lastTs;
+  if (since < RATE_LIMIT_MS){
+    const wait = Math.ceil((RATE_LIMIT_MS - since) / 1000);
+    status.textContent = `✕ Espérate ${wait}s antes de volver a mandar.`;
+    status.className = 'form-status err';
+    return;
+  }
+
+  // ── Capa 5: dedup — ese email ya se registró desde este browser
+  if (getSubmittedEmails().has(email)){
+    status.textContent = '✓ Ese email ya está apuntado. Revisa tu inbox o spam.';
+    status.className = 'form-status ok';
+    return;
+  }
+
+  // ── Capa 6: disable button para anti-double-click
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.6';
+  submitBtn.style.cursor = 'wait';
+
   status.textContent = '↗ Reservando tu spot...';
   status.className = 'form-status';
   try {
@@ -868,6 +949,9 @@ form.addEventListener('submit', async (e)=>{
     if (json.success){
       status.textContent = '✓ Listo. Revisa tu inbox — te llega el welcome ahorita y el invite del beta cuando arranque. Bienvenido al red.team.';
       status.className = 'form-status ok';
+      // Marcar timestamp + email para anti-spam de futuros submits.
+      localStorage.setItem(STORAGE_KEY_LAST, String(Date.now()));
+      rememberEmail(email);
       form.email.value = '';
       form.acepto.checked = false;
     } else {
@@ -877,6 +961,11 @@ form.addEventListener('submit', async (e)=>{
   } catch (err){
     status.textContent = '✕ Sin conexión. Inténtalo en un momento.';
     status.className = 'form-status err';
+  } finally {
+    // Re-habilita el botón pase lo que pase (éxito, error, network down).
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '';
+    submitBtn.style.cursor = '';
   }
 });
 </script>
