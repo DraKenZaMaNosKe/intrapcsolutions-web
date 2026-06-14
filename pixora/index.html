@@ -525,6 +525,21 @@
   <a href="https://www.tiktok.com/@red.team063" target="_blank">@red.team063</a>
 </footer>
 
+<!-- ── EmailJS SDK (welcome auto-reply al lead). Pin de versión + SRI
+     hash protegen contra un CDN compromise; al cambiar de versión hay que
+     recalcular el hash con:
+       curl -sL <url> | openssl dgst -sha384 -binary | openssl base64 -A
+-->
+<script
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"
+  integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS"
+  crossorigin="anonymous"></script>
+<script>
+  // Init EmailJS con el public key. SMTP custom: pixora@intrapcsolutions.com
+  // via Hostinger. Solo público OK para frontend; el private key NUNCA va aquí.
+  emailjs.init({ publicKey: 'QhQ0OSDyw3Bth79V-' });
+</script>
+
 <!-- ─────────────── three.js scene ─────────────── -->
 <script type="importmap">
 {
@@ -833,10 +848,25 @@ form.addEventListener('submit', async (e)=>{
   status.className = 'form-status';
   try {
     const data = new FormData(form);
-    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
-    const json = await res.json();
+    // Dos peticiones en paralelo:
+    //   1) Web3Forms → buzon admin (testerorbix@gmail.com) registra el lead.
+    //   2) EmailJS    → welcome email a la dirección que el lead escribió,
+    //                   enviado desde pixora@intrapcsolutions.com con SMTP
+    //                   custom de Hostinger (DKIM/SPF/DMARC en verde).
+    // Si EmailJS falla NO bloqueamos el flow — el lead aún quedó guardado
+    // en Web3Forms y siempre podemos re-enviarles el welcome manualmente.
+    const w3 = fetch('https://api.web3forms.com/submit', {
+      method: 'POST', body: data,
+    }).then(r => r.json());
+    const ejs = emailjs.send('service_nf2lfca', 'template_z7f3ogp', {
+      email: email,
+    }).catch(err => {
+      console.warn('[pixora] EmailJS welcome failed (lead saved anyway):', err);
+      return null;
+    });
+    const [json] = await Promise.all([w3, ejs]);
     if (json.success){
-      status.textContent = '✓ Listo. Te llega el invite cuando arranque el beta. Bienvenido al red.team.';
+      status.textContent = '✓ Listo. Revisa tu inbox — te llega el welcome ahorita y el invite del beta cuando arranque. Bienvenido al red.team.';
       status.className = 'form-status ok';
       form.email.value = '';
       form.acepto.checked = false;
