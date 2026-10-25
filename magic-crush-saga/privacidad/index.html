@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidad · Magic Crush Saga · Orbix Studio</title>
+  <meta name="description" content="Política de privacidad de Magic Crush Saga para Android, desarrollada por Orbix Studio.">
+  <link rel="canonical" href="https://intrapcsolutions.com/magic-crush-saga/privacidad/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Política de Privacidad — Magic Crush Saga">
+  <meta property="og:description" content="Cómo Magic Crush Saga trata y protege tus datos.">
+  <meta property="og:url" content="https://intrapcsolutions.com/magic-crush-saga/privacidad/">
+  <style>
+    :root {
+      --ink:#122b57; --muted:#506789; --line:#cbdcf2; --paper:#f8fbff;
+      --blue:#2f80db; --cyan:#79c8ff; --violet:#8067dd; --white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:
+      linear-gradient(135deg,rgba(255,255,255,.92),rgba(225,242,255,.92)),
+      repeating-linear-gradient(135deg,#fff 0 34px,#d8eeff 34px 68px);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.68}
+    a{color:#1768bd}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(248,251,255,.9);backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(85,139,196,.25)}
+    .topbar-inner{max-width:980px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:900;letter-spacing:.08em;color:var(--ink);text-decoration:none}
+    .language{display:flex;gap:6px}
+    .language button{border:1px solid var(--line);background:white;color:var(--ink);border-radius:999px;padding:7px 12px;font-weight:800;cursor:pointer}
+    .language button.active{background:var(--ink);color:white;border-color:var(--ink)}
+    main{max-width:980px;margin:36px auto 70px;padding:0 22px}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(145deg,#fff 0%,#e7f5ff 62%,#e9e3ff 100%);
+      border:1px solid #c8ddf4;border-radius:30px;padding:44px;box-shadow:0 24px 70px rgba(38,80,133,.16)}
+    .hero:after{content:"";position:absolute;right:-70px;top:-90px;width:310px;height:310px;border-radius:50%;
+      background:radial-gradient(circle,#fff 0 8%,#9bd7ff 9% 22%,#6c82e4 23% 38%,transparent 39%);opacity:.45}
+    .eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:#3979bd}
+    h1{max-width:700px;margin:10px 0 12px;font-size:clamp(2.25rem,7vw,4.7rem);line-height:.95;letter-spacing:-.055em}
+    .lead{max-width:700px;margin:0;color:var(--muted);font-size:1.1rem}
+    .meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+    .pill{background:#fff;border:1px solid #c6daf0;border-radius:999px;padding:7px 12px;font-size:.86rem;font-weight:800}
+    .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+    .summary div{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 10px 25px rgba(38,80,133,.08)}
+    .summary strong{display:block;margin-bottom:5px}
+    article{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:28px;padding:38px 44px;box-shadow:0 18px 55px rgba(38,80,133,.12)}
+    h2{margin:42px 0 12px;font-size:1.55rem;line-height:1.2} h2:first-child{margin-top:0}
+    h3{margin:24px 0 8px;font-size:1.08rem} p,li{color:#263f65}
+    table{width:100%;border-collapse:separate;border-spacing:0;margin:18px 0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+    th,td{text-align:left;vertical-align:top;padding:13px;border-bottom:1px solid var(--line)}
+    th{background:#eaf5ff;color:var(--ink);font-size:.85rem} tr:last-child td{border-bottom:0}
+    .notice{background:#edf7ff;border-left:5px solid var(--blue);padding:16px 18px;border-radius:8px 16px 16px 8px}
+    footer{max-width:980px;margin:0 auto 32px;padding:0 22px;text-align:center;color:var(--muted);font-size:.88rem}
+    [data-lang="en"]{display:none}
+    body.en [data-lang="es"]{display:none} body.en [data-lang="en"]{display:block}
+    @media(max-width:720px){.hero,article{padding:28px 22px;border-radius:22px}.summary{grid-template-columns:1fr}table{display:block;overflow-x:auto}h1{font-size:2.65rem}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">ORBIX STUDIO</a>
+      <div class="language" aria-label="Idioma">
+        <button id="esButton" class="active" type="button">ES</button>
+        <button id="enButton" type="button">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div data-lang="es">
+        <div class="eyebrow">Magic Crush Saga · Android</div>
+        <h1>Política de Privacidad.</h1>
+        <p class="lead">Te explicamos en lenguaje claro qué información usa el juego, para qué se utiliza y qué opciones tienes.</p>
+      </div>
+      <div data-lang="en">
+        <div class="eyebrow">Magic Crush Saga · Android</div>
+        <h1>Privacy Policy.</h1>
+        <p class="lead">A plain-language explanation of what information the game uses, why it is used, and what choices you have.</p>
+      </div>
+      <div class="meta">
+        <span class="pill">com.orbix.mcs</span>
+        <span class="pill"><span data-lang="es">Vigente desde: 25 de octubre de 2026</span><span data-lang="en">Effective: October 25, 2026</span></span>
+        <span class="pill">Orbix Studio · Guadalajara, Jalisco, México</span>
+      </div>
+    </section>
+
+    <section class="summary" data-lang="es" aria-label="Resumen">
+      <div><strong>Sin cuenta obligatoria</strong>No pedimos tu nombre, correo ni contraseña para jugar.</div>
+      <div><strong>Progreso local</strong>Niveles, estrellas, vidas, boosters, avatar y ajustes se guardan en tu dispositivo.</div>
+      <div><strong>Sin permisos invasivos</strong>No solicitamos ubicación, contactos, cámara ni micrófono.</div>
+    </section>
+    <section class="summary" data-lang="en" aria-label="Summary">
+      <div><strong>No required account</strong>We do not ask for your name, email, or password to play.</div>
+      <div><strong>Local progress</strong>Levels, stars, lives, boosters, avatar, and settings are saved on your device.</div>
+      <div><strong>No invasive permissions</strong>We do not request location, contacts, camera, or microphone access.</div>
+    </section>
+
+    <article data-lang="es">
+      <h2>1. Responsable</h2>
+      <p><strong>Orbix Studio</strong>, operado por IntraPC Solutions desde Guadalajara, Jalisco, México, es responsable del tratamiento descrito en esta política para <strong>Magic Crush Saga</strong> (el “Juego”). Para asuntos de privacidad puedes escribir a <a href="mailto:privacidad@intrapcsolutions.com">privacidad@intrapcsolutions.com</a>.</p>
+
+      <h2>2. Información que utiliza el Juego</h2>
+      <table>
+        <thead><tr><th>Categoría</th><th>Ejemplos</th><th>Finalidad</th><th>Dónde se trata</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Progreso y preferencias</strong></td><td>Niveles desbloqueados, estrellas, vidas, boosters, moneda virtual, avatar elegido, volumen y movimiento reducido.</td><td>Guardar tu partida y personalizar la experiencia.</td><td>Localmente en tu dispositivo.</td></tr>
+          <tr><td><strong>Recursos descargables</strong></td><td>Catálogo de contenido, música y archivos necesarios para el juego.</td><td>Entregar contenido y actualizaciones de recursos sin reinstalar toda la app.</td><td>Supabase Storage y caché local.</td></tr>
+          <tr><td><strong>Datos técnicos de red</strong></td><td>Dirección IP, fecha y hora de solicitud, tipo de dispositivo o datos similares que los proveedores pueden registrar automáticamente.</td><td>Entregar recursos, seguridad, diagnóstico y prevención de abuso.</td><td>Proveedores de infraestructura.</td></tr>
+          <tr><td><strong>Datos publicitarios</strong></td><td>Identificador publicitario, dirección IP aproximada, interacción con anuncios y diagnósticos del SDK, cuando los anuncios estén habilitados.</td><td>Mostrar anuncios recompensados, medirlos, limitar frecuencia y prevenir fraude.</td><td>Google AdMob y servicios relacionados.</td></tr>
+        </tbody>
+      </table>
+      <p class="notice"><strong>No recopilamos directamente</strong> tu nombre, correo electrónico, teléfono, domicilio, ubicación precisa, contactos, fotografías, audio del micrófono, datos de salud ni información financiera.</p>
+
+      <h2>3. Anuncios recompensados</h2>
+      <p>El Juego puede ofrecer anuncios recompensados opcionales, por ejemplo para obtener una vida u otro beneficio dentro del juego. Estos anuncios son proporcionados por <strong>Google AdMob</strong>. Google y sus socios pueden tratar identificadores del dispositivo o publicitarios, dirección IP, información técnica e interacciones con el anuncio para mostrarlo, medir rendimiento, limitar frecuencia, detectar fraude y cumplir obligaciones legales.</p>
+      <p>Cuando la ley lo requiera, solicitaremos consentimiento antes de usar datos para anuncios personalizados. Puedes cambiar tus preferencias desde los controles de privacidad que se presenten en el Juego o desde los ajustes de anuncios de tu dispositivo o cuenta de Google. Revisa la <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Política de Privacidad de Google</a> y la información de <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">tecnologías publicitarias</a>.</p>
+
+      <h2>4. Descarga de contenido y Supabase</h2>
+      <p>El Juego consulta un catálogo público y descarga música u otros recursos desde infraestructura de <strong>Supabase</strong>. No enviamos tu progreso, avatar ni inventario a esa infraestructura. Como ocurre con cualquier servicio web, Supabase y sus proveedores pueden procesar datos técnicos de conexión necesarios para entregar los archivos y proteger el servicio. Consulta la <a href="https://supabase.com/privacy" rel="noopener noreferrer">política de privacidad de Supabase</a>.</p>
+
+      <h2>5. Respaldo de Android</h2>
+      <p>Android puede incluir datos locales del Juego en su sistema de copia de seguridad o restauración si esa función está habilitada en tu dispositivo. Ese respaldo es administrado por Google y por la configuración de tu cuenta. Puedes controlarlo desde los ajustes de respaldo de Android. No usamos este mecanismo para acceder a tu cuenta de Google.</p>
+
+      <h2>6. Analítica y diagnósticos</h2>
+      <p>La versión actual no activa Unity Analytics ni Unity Cloud Diagnostics. Si en el futuro incorporamos analítica, reporte de fallos, inicio de sesión u otro servicio que cambie el tratamiento de datos, actualizaremos esta política y las declaraciones de Seguridad de los datos en Google Play antes de publicarlo.</p>
+
+      <h2>7. Compartición, venta y transferencias</h2>
+      <p>No vendemos datos personales. Los proveedores descritos —principalmente Google AdMob, Google Play/Android y Supabase— pueden tratar datos limitados para prestar sus servicios. Algunos procesos pueden ocurrir fuera de México conforme a las medidas y contratos de cada proveedor.</p>
+
+      <h2>8. Conservación y eliminación</h2>
+      <ul>
+        <li>El progreso, preferencias y caché permanecen en tu dispositivo hasta que borres los datos del Juego o lo desinstales.</li>
+        <li>Una restauración de Android puede recuperar ciertos datos locales si conservas habilitado el respaldo.</li>
+        <li>Los proveedores conservan sus registros técnicos y publicitarios durante los plazos descritos en sus propias políticas.</li>
+      </ul>
+      <p>Como el Juego actualmente no crea cuentas propias ni mantiene perfiles personales en nuestros servidores, no existe una cuenta remota que tengas que eliminar. Para solicitar información o ejercer derechos sobre datos que razonablemente podamos vincular contigo, contáctanos.</p>
+
+      <h2>9. Tus derechos</h2>
+      <p>De acuerdo con la legislación aplicable en México, puedes solicitar acceso, rectificación, cancelación u oposición (derechos ARCO), revocar consentimiento o limitar el uso de datos personales. Escribe a <a href="mailto:privacidad@intrapcsolutions.com">privacidad@intrapcsolutions.com</a> con tu solicitud y la información necesaria para identificar el caso. Responderemos dentro de los plazos legalmente aplicables.</p>
+
+      <h2>10. Privacidad de menores</h2>
+      <p>Magic Crush Saga es un juego para público general y <strong>no está dirigido específicamente a menores de 13 años</strong>. No recopilamos intencionalmente información personal de menores. Si una madre, padre o tutor considera que un menor nos proporcionó información personal, puede contactarnos para investigarlo y, cuando corresponda, eliminarla. La clasificación de audiencia y configuración de anuncios publicada en Google Play deberá ser consistente con esta sección.</p>
+
+      <h2>11. Seguridad</h2>
+      <p>Aplicamos medidas razonables para reducir accesos, modificaciones o divulgaciones no autorizadas. Las conexiones de descarga utilizan HTTPS y el Juego verifica la integridad de los recursos descargados. Ningún sistema es completamente infalible, por lo que revisamos nuestras medidas conforme evoluciona el Juego.</p>
+
+      <h2>12. Cambios a esta política</h2>
+      <p>Podemos actualizar esta política cuando cambien las funciones, proveedores o requisitos legales. Publicaremos la versión vigente en esta misma URL e indicaremos una nueva fecha de actualización. Cuando el cambio sea material, lo comunicaremos dentro del Juego cuando resulte necesario.</p>
+
+      <h2>13. Contacto</h2>
+      <p><strong>Orbix Studio · IntraPC Solutions</strong><br>Guadalajara, Jalisco, México<br><a href="mailto:privacidad@intrapcsolutions.com">privacidad@intrapcsolutions.com</a><br><a href="https://intrapcsolutions.com/">intrapcsolutions.com</a></p>
+    </article>
+
+    <article data-lang="en">
+      <h2>1. Data controller</h2>
+      <p><strong>Orbix Studio</strong>, operated by IntraPC Solutions in Guadalajara, Jalisco, Mexico, is responsible for the processing described in this policy for <strong>Magic Crush Saga</strong> (the “Game”). Privacy inquiries may be sent to <a href="mailto:privacidad@intrapcsolutions.com">privacidad@intrapcsolutions.com</a>.</p>
+
+      <h2>2. Information used by the Game</h2>
+      <table>
+        <thead><tr><th>Category</th><th>Examples</th><th>Purpose</th><th>Where processed</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Progress and preferences</strong></td><td>Unlocked levels, stars, lives, boosters, virtual currency, selected avatar, volume, and reduced motion.</td><td>Save progress and personalize the experience.</td><td>Locally on your device.</td></tr>
+          <tr><td><strong>Downloaded resources</strong></td><td>Content catalog, music, and game resource files.</td><td>Deliver content and resource updates without reinstalling the entire app.</td><td>Supabase Storage and local cache.</td></tr>
+          <tr><td><strong>Technical network data</strong></td><td>IP address, request time, device type, or similar data automatically logged by service providers.</td><td>Content delivery, security, diagnostics, and abuse prevention.</td><td>Infrastructure providers.</td></tr>
+          <tr><td><strong>Advertising data</strong></td><td>Advertising ID, approximate IP address, ad interactions, and SDK diagnostics when ads are enabled.</td><td>Rewarded ads, measurement, frequency capping, and fraud prevention.</td><td>Google AdMob and related services.</td></tr>
+        </tbody>
+      </table>
+      <p class="notice"><strong>We do not directly collect</strong> your name, email, phone number, home address, precise location, contacts, photos, microphone audio, health data, or financial information.</p>
+
+      <h2>3. Rewarded advertising</h2>
+      <p>The Game may offer optional rewarded ads, such as an ad in exchange for an extra life or another in-game benefit. These ads are provided by <strong>Google AdMob</strong>. Google and its partners may process advertising or device identifiers, approximate IP address, technical data, and ad interactions to deliver and measure ads, limit frequency, prevent fraud, and comply with the law.</p>
+      <p>Where required, we will request consent before using data for personalized ads. You can change your choices through privacy controls shown in the Game or your device/Google account ad settings. See the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">advertising technologies information</a>.</p>
+
+      <h2>4. Content downloads and Supabase</h2>
+      <p>The Game reads a public catalog and downloads music or other resources using <strong>Supabase</strong> infrastructure. We do not send your progress, selected avatar, or inventory to this infrastructure. Like any web service, Supabase and its providers may process technical connection data required to deliver files and protect the service. See the <a href="https://supabase.com/privacy" rel="noopener noreferrer">Supabase Privacy Policy</a>.</p>
+
+      <h2>5. Android backup</h2>
+      <p>Android may include local Game data in backup or restore if that feature is enabled on your device. Google manages that backup under your account settings. You may control it in Android backup settings. We do not use this mechanism to access your Google account.</p>
+
+      <h2>6. Analytics and diagnostics</h2>
+      <p>The current version does not enable Unity Analytics or Unity Cloud Diagnostics. If we later add analytics, crash reporting, sign-in, or another service that changes data processing, we will update this policy and the Google Play Data safety disclosures before release.</p>
+
+      <h2>7. Sharing, sale, and international processing</h2>
+      <p>We do not sell personal data. The providers described above—primarily Google AdMob, Google Play/Android, and Supabase—may process limited data to provide their services. Some processing may occur outside Mexico under each provider’s safeguards and agreements.</p>
+
+      <h2>8. Retention and deletion</h2>
+      <ul>
+        <li>Progress, preferences, and cache remain on your device until you clear the Game’s data or uninstall it.</li>
+        <li>Android restore may recover some local data if backup remains enabled.</li>
+        <li>Providers retain technical and advertising records under their own policies.</li>
+      </ul>
+      <p>The Game currently has no proprietary account system or personal profiles stored on our servers, so there is no remote account to delete. Contact us to request information or exercise rights concerning data we can reasonably associate with you.</p>
+
+      <h2>9. Your rights</h2>
+      <p>Subject to applicable law, you may request access, correction, deletion, or objection; withdraw consent; or limit the use of personal data. Send your request and enough information to identify the matter to <a href="mailto:privacidad@intrapcsolutions.com">privacidad@intrapcsolutions.com</a>. We will respond within applicable legal time limits.</p>
+
+      <h2>10. Children’s privacy</h2>
+      <p>Magic Crush Saga is a general-audience game and is <strong>not specifically directed to children under 13</strong>. We do not knowingly collect personal information from children. A parent or guardian who believes a child provided personal information may contact us so we can investigate and delete it where appropriate. The audience and advertising settings declared in Google Play must remain consistent with this section.</p>
+
+      <h2>11. Security</h2>
+      <p>We use reasonable safeguards against unauthorized access, alteration, or disclosure. Downloads use HTTPS and the Game checks downloaded resource integrity. No system is completely secure, so we review safeguards as the Game evolves.</p>
+
+      <h2>12. Changes</h2>
+      <p>We may update this policy when features, providers, or legal requirements change. The current version will remain at this URL with a revised effective date. Material changes will be communicated in the Game where required.</p>
+
+      <h2>13. Contact</h2>
+      <p><strong>Orbix Studio · IntraPC Solutions</strong><br>Guadalajara, Jalisco, Mexico<br><a href="mailto:privacidad@intrapcsolutions.com">privacidad@intrapcsolutions.com</a><br><a href="https://intrapcsolutions.com/">intrapcsolutions.com</a></p>
+    </article>
+  </main>
+
+  <footer>© 2026 Orbix Studio · Magic Crush Saga · Guadalajara, México</footer>
+  <script>
+    const esButton = document.getElementById('esButton');
+    const enButton = document.getElementById('enButton');
+    const setLanguage = (language) => {
+      const english = language === 'en';
+      document.body.classList.toggle('en', english);
+      document.documentElement.lang = english ? 'en' : 'es-MX';
+      esButton.classList.toggle('active', !english);
+      enButton.classList.toggle('active', english);
+      try { localStorage.setItem('mcs-policy-language', language); } catch (_) {}
+    };
+    esButton.addEventListener('click', () => setLanguage('es'));
+    enButton.addEventListener('click', () => setLanguage('en'));
+    const queryLanguage = new URLSearchParams(location.search).get('lang');
+    let savedLanguage = null;
+    try { savedLanguage = localStorage.getItem('mcs-policy-language'); } catch (_) {}
+    setLanguage(queryLanguage === 'en' || savedLanguage === 'en' ? 'en' : 'es');
+  </script>
+</body>
+</html>
