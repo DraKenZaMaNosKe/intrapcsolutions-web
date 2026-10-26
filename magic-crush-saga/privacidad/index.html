@@ -87,13 +87,13 @@
     </section>
 
     <section class="summary" data-lang="es" aria-label="Resumen">
-      <div><strong>Sin cuenta obligatoria</strong>No pedimos tu nombre, correo ni contraseña para jugar.</div>
-      <div><strong>Progreso local</strong>Niveles, estrellas, vidas, boosters, avatar y ajustes se guardan en tu dispositivo.</div>
+      <div><strong>Cuenta opcional</strong>Puedes jugar sin cuenta o vincular Google/Facebook para sincronización y funciones sociales.</div>
+      <div><strong>Tu progreso</strong>Niveles, estrellas, vidas, boosters, avatar y ajustes se guardan localmente o se sincronizan si vinculas una cuenta.</div>
       <div><strong>Sin permisos invasivos</strong>No solicitamos ubicación, contactos, cámara ni micrófono.</div>
     </section>
     <section class="summary" data-lang="en" aria-label="Summary">
-      <div><strong>No required account</strong>We do not ask for your name, email, or password to play.</div>
-      <div><strong>Local progress</strong>Levels, stars, lives, boosters, avatar, and settings are saved on your device.</div>
+      <div><strong>Optional account</strong>You can play without an account or link Google/Facebook for synchronization and social features.</div>
+      <div><strong>Your progress</strong>Levels, stars, lives, boosters, avatar, and settings are stored locally or synced when you link an account.</div>
       <div><strong>No invasive permissions</strong>We do not request location, contacts, camera, or microphone access.</div>
     </section>
 
@@ -105,37 +105,39 @@
       <table>
         <thead><tr><th>Categoría</th><th>Ejemplos</th><th>Finalidad</th><th>Dónde se trata</th></tr></thead>
         <tbody>
-          <tr><td><strong>Progreso y preferencias</strong></td><td>Niveles desbloqueados, estrellas, vidas, boosters, moneda virtual, avatar elegido, volumen y movimiento reducido.</td><td>Guardar tu partida y personalizar la experiencia.</td><td>Localmente en tu dispositivo.</td></tr>
+          <tr><td><strong>Cuenta opcional</strong></td><td>Correo, nombre visible, identificador de cuenta y proveedor de acceso (Google o Facebook).</td><td>Crear y proteger tu perfil, sincronizar progreso y habilitar funciones sociales.</td><td>Proveedor de acceso y sistemas de Orbix Studio/Supabase.</td></tr>
+          <tr><td><strong>Progreso y preferencias</strong></td><td>Niveles desbloqueados, estrellas, vidas, boosters, moneda virtual, avatar elegido, volumen y movimiento reducido.</td><td>Guardar tu partida y personalizar la experiencia.</td><td>Localmente; también en la nube si vinculas una cuenta.</td></tr>
           <tr><td><strong>Recursos descargables</strong></td><td>Catálogo de contenido, música y archivos necesarios para el juego.</td><td>Entregar contenido y actualizaciones de recursos sin reinstalar toda la app.</td><td>Supabase Storage y caché local.</td></tr>
           <tr><td><strong>Datos técnicos de red</strong></td><td>Dirección IP, fecha y hora de solicitud, tipo de dispositivo o datos similares que los proveedores pueden registrar automáticamente.</td><td>Entregar recursos, seguridad, diagnóstico y prevención de abuso.</td><td>Proveedores de infraestructura.</td></tr>
           <tr><td><strong>Datos publicitarios</strong></td><td>Identificador publicitario, dirección IP aproximada, interacción con anuncios y diagnósticos del SDK, cuando los anuncios estén habilitados.</td><td>Mostrar anuncios recompensados, medirlos, limitar frecuencia y prevenir fraude.</td><td>Google AdMob y servicios relacionados.</td></tr>
         </tbody>
       </table>
-      <p class="notice"><strong>No recopilamos directamente</strong> tu nombre, correo electrónico, teléfono, domicilio, ubicación precisa, contactos, fotografías, audio del micrófono, datos de salud ni información financiera.</p>
+      <p class="notice"><strong>La cuenta es opcional.</strong> Si eliges vincular Google o Facebook, recibiremos los datos básicos autorizados que muestre la pantalla de consentimiento, normalmente correo, nombre visible e identificador. No pedimos tu contraseña ni recopilamos directamente teléfono, domicilio, ubicación precisa, contactos, fotografías, audio del micrófono, datos de salud o datos completos de tarjetas.</p>
 
       <h2>3. Anuncios recompensados</h2>
       <p>El Juego puede ofrecer anuncios recompensados opcionales, por ejemplo para obtener una vida u otro beneficio dentro del juego. Estos anuncios son proporcionados por <strong>Google AdMob</strong>. Google y sus socios pueden tratar identificadores del dispositivo o publicitarios, dirección IP, información técnica e interacciones con el anuncio para mostrarlo, medir rendimiento, limitar frecuencia, detectar fraude y cumplir obligaciones legales.</p>
       <p>Cuando la ley lo requiera, solicitaremos consentimiento antes de usar datos para anuncios personalizados. Puedes cambiar tus preferencias desde los controles de privacidad que se presenten en el Juego o desde los ajustes de anuncios de tu dispositivo o cuenta de Google. Revisa la <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Política de Privacidad de Google</a> y la información de <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">tecnologías publicitarias</a>.</p>
 
       <h2>4. Descarga de contenido y Supabase</h2>
-      <p>El Juego consulta un catálogo público y descarga música u otros recursos desde infraestructura de <strong>Supabase</strong>. No enviamos tu progreso, avatar ni inventario a esa infraestructura. Como ocurre con cualquier servicio web, Supabase y sus proveedores pueden procesar datos técnicos de conexión necesarios para entregar los archivos y proteger el servicio. Consulta la <a href="https://supabase.com/privacy" rel="noopener noreferrer">política de privacidad de Supabase</a>.</p>
+      <p>El Juego consulta un catálogo público y descarga música u otros recursos desde infraestructura de <strong>Supabase</strong>. Si juegas sin cuenta, el progreso permanece local. Si vinculas una cuenta, Supabase puede almacenar el perfil, progreso, avatar, inventario y relaciones sociales necesarios para sincronizar el Juego. También procesa datos técnicos de conexión para entregar archivos, autenticar solicitudes y proteger el servicio. Consulta la <a href="https://supabase.com/privacy" rel="noopener noreferrer">política de privacidad de Supabase</a>.</p>
 
       <h2>5. Respaldo de Android</h2>
       <p>Android puede incluir datos locales del Juego en su sistema de copia de seguridad o restauración si esa función está habilitada en tu dispositivo. Ese respaldo es administrado por Google y por la configuración de tu cuenta. Puedes controlarlo desde los ajustes de respaldo de Android. No usamos este mecanismo para acceder a tu cuenta de Google.</p>
 
       <h2>6. Analítica y diagnósticos</h2>
-      <p>La versión actual no activa Unity Analytics ni Unity Cloud Diagnostics. Si en el futuro incorporamos analítica, reporte de fallos, inicio de sesión u otro servicio que cambie el tratamiento de datos, actualizaremos esta política y las declaraciones de Seguridad de los datos en Google Play antes de publicarlo.</p>
+      <p>La versión actual no activa Unity Analytics ni Unity Cloud Diagnostics. El inicio de sesión opcional utiliza OAuth de Google o Facebook; no recibimos sus contraseñas. Si incorporamos analítica, reporte de fallos u otro servicio que cambie el tratamiento, actualizaremos esta política y las declaraciones de Seguridad de los datos antes de publicarlo.</p>
 
       <h2>7. Compartición, venta y transferencias</h2>
-      <p>No vendemos datos personales. Los proveedores descritos —principalmente Google AdMob, Google Play/Android y Supabase— pueden tratar datos limitados para prestar sus servicios. Algunos procesos pueden ocurrir fuera de México conforme a las medidas y contratos de cada proveedor.</p>
+      <p>No vendemos datos personales. Los proveedores descritos —principalmente Google AdMob, Google Play/Android, Meta/Facebook y Supabase— pueden tratar datos limitados para prestar autenticación, publicidad, compras, sincronización o funciones sociales. Algunos procesos pueden ocurrir fuera de México conforme a las medidas y contratos de cada proveedor.</p>
 
       <h2>8. Conservación y eliminación</h2>
       <ul>
-        <li>El progreso, preferencias y caché permanecen en tu dispositivo hasta que borres los datos del Juego o lo desinstales.</li>
+        <li>El progreso local, preferencias y caché permanecen en tu dispositivo hasta que borres los datos del Juego o lo desinstales.</li>
+        <li>Los datos sincronizados permanecen asociados a la cuenta hasta que solicites su eliminación o deje de ser necesario conservarlos.</li>
         <li>Una restauración de Android puede recuperar ciertos datos locales si conservas habilitado el respaldo.</li>
         <li>Los proveedores conservan sus registros técnicos y publicitarios durante los plazos descritos en sus propias políticas.</li>
       </ul>
-      <p>Como el Juego actualmente no crea cuentas propias ni mantiene perfiles personales en nuestros servidores, no existe una cuenta remota que tengas que eliminar. Para solicitar información o ejercer derechos sobre datos que razonablemente podamos vincular contigo, contáctanos.</p>
+      <p>Puedes solicitar la eliminación permanente de tu cuenta de Magic Crush Saga y sus datos asociados desde <a href="/magic-crush-saga/eliminar-cuenta/">nuestra página de eliminación de cuenta</a> o desde la opción correspondiente dentro del Juego. Ciertos registros mínimos pueden conservarse temporalmente por seguridad, prevención de fraude, respaldos u obligaciones legales, conforme a los periodos explicados en esa página.</p>
 
       <h2>9. Tus derechos</h2>
       <p>De acuerdo con la legislación aplicable en México, puedes solicitar acceso, rectificación, cancelación u oposición (derechos ARCO), revocar consentimiento o limitar el uso de datos personales. Escribe a <a href="mailto:privacidad@intrapcsolutions.com">privacidad@intrapcsolutions.com</a> con tu solicitud y la información necesaria para identificar el caso. Responderemos dentro de los plazos legalmente aplicables.</p>
@@ -161,37 +163,39 @@
       <table>
         <thead><tr><th>Category</th><th>Examples</th><th>Purpose</th><th>Where processed</th></tr></thead>
         <tbody>
-          <tr><td><strong>Progress and preferences</strong></td><td>Unlocked levels, stars, lives, boosters, virtual currency, selected avatar, volume, and reduced motion.</td><td>Save progress and personalize the experience.</td><td>Locally on your device.</td></tr>
+          <tr><td><strong>Optional account</strong></td><td>Email, display name, account identifier, and sign-in provider (Google or Facebook).</td><td>Create and protect your profile, synchronize progress, and enable social features.</td><td>Sign-in provider and Orbix Studio/Supabase systems.</td></tr>
+          <tr><td><strong>Progress and preferences</strong></td><td>Unlocked levels, stars, lives, boosters, virtual currency, selected avatar, volume, and reduced motion.</td><td>Save progress and personalize the experience.</td><td>Locally; also in the cloud when you link an account.</td></tr>
           <tr><td><strong>Downloaded resources</strong></td><td>Content catalog, music, and game resource files.</td><td>Deliver content and resource updates without reinstalling the entire app.</td><td>Supabase Storage and local cache.</td></tr>
           <tr><td><strong>Technical network data</strong></td><td>IP address, request time, device type, or similar data automatically logged by service providers.</td><td>Content delivery, security, diagnostics, and abuse prevention.</td><td>Infrastructure providers.</td></tr>
           <tr><td><strong>Advertising data</strong></td><td>Advertising ID, approximate IP address, ad interactions, and SDK diagnostics when ads are enabled.</td><td>Rewarded ads, measurement, frequency capping, and fraud prevention.</td><td>Google AdMob and related services.</td></tr>
         </tbody>
       </table>
-      <p class="notice"><strong>We do not directly collect</strong> your name, email, phone number, home address, precise location, contacts, photos, microphone audio, health data, or financial information.</p>
+      <p class="notice"><strong>The account is optional.</strong> If you link Google or Facebook, we receive the basic data authorized on the consent screen, normally email, display name, and an identifier. We never request your provider password and do not directly collect phone number, home address, precise location, contacts, photos, microphone audio, health data, or complete payment-card details.</p>
 
       <h2>3. Rewarded advertising</h2>
       <p>The Game may offer optional rewarded ads, such as an ad in exchange for an extra life or another in-game benefit. These ads are provided by <strong>Google AdMob</strong>. Google and its partners may process advertising or device identifiers, approximate IP address, technical data, and ad interactions to deliver and measure ads, limit frequency, prevent fraud, and comply with the law.</p>
       <p>Where required, we will request consent before using data for personalized ads. You can change your choices through privacy controls shown in the Game or your device/Google account ad settings. See the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">advertising technologies information</a>.</p>
 
       <h2>4. Content downloads and Supabase</h2>
-      <p>The Game reads a public catalog and downloads music or other resources using <strong>Supabase</strong> infrastructure. We do not send your progress, selected avatar, or inventory to this infrastructure. Like any web service, Supabase and its providers may process technical connection data required to deliver files and protect the service. See the <a href="https://supabase.com/privacy" rel="noopener noreferrer">Supabase Privacy Policy</a>.</p>
+      <p>The Game reads a public catalog and downloads music or other resources using <strong>Supabase</strong> infrastructure. If you play without an account, progress remains local. If you link an account, Supabase may store the profile, progress, avatar, inventory, and social relationships needed to synchronize the Game. It also processes technical connection data to deliver files, authenticate requests, and protect the service. See the <a href="https://supabase.com/privacy" rel="noopener noreferrer">Supabase Privacy Policy</a>.</p>
 
       <h2>5. Android backup</h2>
       <p>Android may include local Game data in backup or restore if that feature is enabled on your device. Google manages that backup under your account settings. You may control it in Android backup settings. We do not use this mechanism to access your Google account.</p>
 
       <h2>6. Analytics and diagnostics</h2>
-      <p>The current version does not enable Unity Analytics or Unity Cloud Diagnostics. If we later add analytics, crash reporting, sign-in, or another service that changes data processing, we will update this policy and the Google Play Data safety disclosures before release.</p>
+      <p>The current version does not enable Unity Analytics or Unity Cloud Diagnostics. Optional sign-in uses Google or Facebook OAuth; we never receive provider passwords. If we later add analytics, crash reporting, or another service that changes processing, we will update this policy and the Google Play Data safety disclosures before release.</p>
 
       <h2>7. Sharing, sale, and international processing</h2>
-      <p>We do not sell personal data. The providers described above—primarily Google AdMob, Google Play/Android, and Supabase—may process limited data to provide their services. Some processing may occur outside Mexico under each provider’s safeguards and agreements.</p>
+      <p>We do not sell personal data. The providers described above—primarily Google AdMob, Google Play/Android, Meta/Facebook, and Supabase—may process limited data for authentication, advertising, purchases, synchronization, or social features. Some processing may occur outside Mexico under each provider’s safeguards and agreements.</p>
 
       <h2>8. Retention and deletion</h2>
       <ul>
-        <li>Progress, preferences, and cache remain on your device until you clear the Game’s data or uninstall it.</li>
+        <li>Local progress, preferences, and cache remain on your device until you clear the Game’s data or uninstall it.</li>
+        <li>Synced data remains associated with the account until you request deletion or it is no longer necessary.</li>
         <li>Android restore may recover some local data if backup remains enabled.</li>
         <li>Providers retain technical and advertising records under their own policies.</li>
       </ul>
-      <p>The Game currently has no proprietary account system or personal profiles stored on our servers, so there is no remote account to delete. Contact us to request information or exercise rights concerning data we can reasonably associate with you.</p>
+      <p>You may request permanent deletion of your Magic Crush Saga account and associated data through <a href="/magic-crush-saga/eliminar-cuenta/?lang=en">our account-deletion page</a> or the corresponding option in the Game. Certain minimum records may be retained temporarily for security, fraud prevention, backups, or legal obligations, following the periods explained on that page.</p>
 
       <h2>9. Your rights</h2>
       <p>Subject to applicable law, you may request access, correction, deletion, or objection; withdraw consent; or limit the use of personal data. Send your request and enough information to identify the matter to <a href="mailto:privacidad@intrapcsolutions.com">privacidad@intrapcsolutions.com</a>. We will respond within applicable legal time limits.</p>
